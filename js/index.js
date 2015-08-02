@@ -57,8 +57,15 @@ var app = {
 	document.getElementById('DeviceID').value = device.uuid;
 	document.getElementById('DeviceVersion').value = device.version;
 	document.getElementById('ConnectionType').value = navigator.connection.type;
+        app.CheckLogIn();
 
     },
+
+    CheckLogIn: function(){
+	alert(document.getElementById('DeviceID').value);
+    },
+
+
     TrackingEvent: function(){
 	var TrackLocation = navigator.geolocation.watchPosition(onCurLocSuccess, onCurLocError, { maximumAge: 3000, enableHighAccuracy: true });
     }
