@@ -64,6 +64,7 @@ var app = {
     CheckLogIn: function(){
 	if(document.getElementById('UID').value = "")
 	{
+alert('no UID');
 	 var http = new XMLHttpRequest();
 	 var url = "http://www.loadstatus.com/App/LogIn.asp";
 	 var params = "DeviceID="+document.getElementById('DeviceID').value;
@@ -76,6 +77,7 @@ var app = {
 	 http.onreadystatechange = function() {
 	    if(http.readyState == 4) {
 		var strresults = http.responseText;
+alert(strresults);
 		document.getElementById('FormResponse').innerHTML = strresults;
 	    }
 	 }
