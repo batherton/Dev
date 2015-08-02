@@ -159,13 +159,13 @@ if (errorc == ""){
 			  {
 				var networkState = navigator.connection.type;
 
-				if(networkState == "NONE")
+				if(networkState == "NONE" || networkState == "none")
 				{
 					document.getElementById('UID').value = "";
-					navigator.notification.alert('Could not connect to network'+networkState, alertCallback, 'Error', 'Ok')
+					navigator.notification.alert('Could not connect to network', alertCallback, 'Error', 'Ok')
 				}else{
 					document.getElementById('UID').value = "";
-					navigator.notification.alert('Something wrong with log in'+networkState, alertCallback, 'Error', 'Ok')
+					navigator.notification.alert('Something wrong with log in', alertCallback, 'Error', 'Ok')
 				}
 			  }
 
