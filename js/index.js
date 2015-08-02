@@ -62,6 +62,7 @@ var app = {
     },
 
     CheckLogIn: function(){
+alert('CheckLogIn');
 	if(document.getElementById('UID').value = "")
 	{
 alert('no UID');
