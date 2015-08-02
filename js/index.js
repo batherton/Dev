@@ -62,27 +62,11 @@ var app = {
     },
 
     CheckLogIn: function(){
-alert('CheckLogIn');
 	if(document.getElementById('UID').value = "")
 	{
-alert('no UID');
-	 var http = new XMLHttpRequest();
-	 var url = "http://www.loadstatus.com/App/LogIn.asp";
-	 var params = "DeviceID="+document.getElementById('DeviceID').value;
-	// var params = params+"&UID="+str2;
-	// var params = params+"&Action="+str3;
-	 http.open("POST", url, true);
-	 http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	 http.setRequestHeader("Content-length", params.length);
-	 http.setRequestHeader("Connection", "close");
-	 http.onreadystatechange = function() {
-	    if(http.readyState == 4) {
-		var strresults = http.responseText;
-alert(strresults);
-		document.getElementById('FormResponse').innerHTML = strresults;
-	    }
-	 }
-	 http.send(params);
+	 document.getElementById('LoginDiv').setAttribute('style', 'display:block;');
+
+
 	}
 
     },
