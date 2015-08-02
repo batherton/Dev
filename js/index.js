@@ -99,6 +99,30 @@ function onCurLocError(error) {
 
 
 function LogIn(){
+
+ errorc = "";
+ if (document.getElementById('UserName').value == "")
+ {
+   errorc += "1";
+   document.getElementById('UserName').style.backgroundColor="yellow ";
+ }
+ else
+ {
+   document.getElementById('UserName').style.backgroundColor="white ";
+ }
+
+ if (document.getElementById('Password').value == "")
+ {
+   errorc += "1";
+   document.getElementById('Password').style.backgroundColor="yellow ";
+ }
+ else
+ {
+   document.getElementById('Password').style.backgroundColor="white ";
+ }
+if (errorc == ""){
+
+
 	 var http = new XMLHttpRequest();
 	 var url = "http://www.loadstatus.com/App/Login.asp";
 	 var params = "DeviceID="+document.getElementById('DeviceID').value;
@@ -141,7 +165,7 @@ function LogIn(){
 	 }
 	 http.send(params);
 }
-
+}
 
 
 
