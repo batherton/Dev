@@ -37,12 +37,6 @@ var app = {
     receivedEvent: function(id) {
 
 
-	document.getElementById('DevicePlatform').value = device.platform;
-	document.getElementById('DeviceModel').value = device.model;
-	document.getElementById('DeviceID').value = device.uuid;
-	document.getElementById('DeviceVersion').value = device.version;
-	document.getElementById('ConnectionType').value = navigator.connection.type;
-
         var parentElement = document.getElementById(id);
 
         var listeningElement = parentElement.querySelector('.listening');
@@ -56,6 +50,11 @@ var app = {
 
 
 
+	document.getElementById('DevicePlatform').value = device.platform;
+	document.getElementById('DeviceModel').value = device.model;
+	document.getElementById('DeviceID').value = device.uuid;
+	document.getElementById('DeviceVersion').value = device.version;
+	document.getElementById('ConnectionType').value = navigator.connection.type;
 
     },
     TrackingEvent: function(){
