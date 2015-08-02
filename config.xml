@@ -4,13 +4,9 @@
 
     <name>my-app</name>
 
-    <description>
-        Nationwide
-    </description>
+    <description>Nationwide</description>
 
-    <author email="brian@asimail.com" href="http://loadstatus.com">
-        NationwidePA IT Team
-    </author>
+    <author email="brian@asimail.com" href="http://loadstatus.com">NationwidePA IT Team</author>
 
     <content src="index.html" />
 
@@ -101,7 +97,6 @@
     <icon gap:platform="ios" height="114" src="www/res/icon/ios/icon-57-2x.png" width="114" />
 
     <icon gap:platform="ios" height="144" src="www/res/icon/ios/icon-72-2x.png" width="144" />
-
 
     <icon gap:platform="webos" src="www/res/icon/webos/icon-64.png" />
 
