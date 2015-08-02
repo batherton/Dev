@@ -42,13 +42,13 @@ var app = {
 
         var listeningElement = parentElement.querySelector('.listening');
 
-        //var receivedElement = parentElement.querySelector('.received');
+        var receivedElement = parentElement.querySelector('.received');
 
 
 
          listeningElement.setAttribute('style', 'display:none;');
 
-         //receivedElement.setAttribute('style', 'display:block;');
+         receivedElement.setAttribute('style', 'display:block;');
 
 
 
@@ -62,7 +62,26 @@ var app = {
     },
 
     CheckLogIn: function(){
-	alert(document.getElementById('DeviceID').value);
+	if(document.getElementById('UID').value = "")
+	{
+	 var http = new XMLHttpRequest();
+	 var url = "http://www.loadstatus.com/App/LogIn.asp";
+	 var params = "DeviceID="+document.getElementById('DeviceID').value;
+	// var params = params+"&UID="+str2;
+	// var params = params+"&Action="+str3;
+	 http.open("POST", url, true);
+	 http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	 http.setRequestHeader("Content-length", params.length);
+	 http.setRequestHeader("Connection", "close");
+	 http.onreadystatechange = function() {
+	    if(http.readyState == 4) {
+		var strresults = http.responseText;
+		document.getElementById('FormResponse').innerHTML = strresults;
+	    }
+	 }
+	 http.send(params);
+	}
+
     },
 
 
