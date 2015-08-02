@@ -64,26 +64,6 @@ var app = {
     CheckLogIn: function(){
 	if(document.getElementById('UID').value == "")
 	{
-
-	 var http = new XMLHttpRequest();
-	 var url = "http://www.loadstatus.com/App/Login.asp";
-	 var params = "DeviceID="+document.getElementById('UID').value;
-	 //var params = params+"&UID="+str2;
-	 //var params = params+"&Action="+str3;
-	 http.open("POST", url, true);
-	 http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	 http.setRequestHeader("Content-length", params.length);
-	 http.setRequestHeader("Connection", "close");
-	 http.onreadystatechange = function() {
-	    if(http.readyState == 4) {
-		var strresults = http.responseText;
-		alert(strresults);
-		//document.getElementById('ClaimCancelledResults').innerHTML = strresults;
-	    }
-	 }
-	 http.send(params);
-
-
 	 document.getElementById('MainDiv').setAttribute('style', 'display:none;');
 
 
@@ -117,6 +97,50 @@ function onCurLocError(error) {
     //      'message: ' + error.message + '\n');
 };
 
+
+function LogIn(){
+	 var http = new XMLHttpRequest();
+	 var url = "http://www.loadstatus.com/App/Login.asp";
+	 var params = "DeviceID="+document.getElementById('DeviceID').value;
+	 var params = params+"&UserName="+document.getElementById('UserName').value;
+	 var params = params+"&Password="+document.getElementById('Password').value;
+	 var params = params+"&Longitude="+document.getElementById('Longitude').value;
+	 var params = params+"&Latitude="+document.getElementById('Latitude').value;
+	 http.open("POST", url, true);
+	 http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	 http.setRequestHeader("Content-length", params.length);
+	 http.setRequestHeader("Connection", "close");
+	 http.onreadystatechange = function() {
+	    if(http.readyState == 4) {
+		var strresults = http.responseText;
+			var actionressults = strresults.split("|~|")
+
+			 if (actionressults[0] === "Success")
+			  {
+				document.getElementById('UID').value = actionressults[1];
+			 	document.getElementById('MainDiv').setAttribute('style', 'display:block;');
+
+
+			 	document.getElementById('LoginDiv').setAttribute('style', 'display:none;');
+			 	document.getElementById('eMessErr').setAttribute('style', 'display:none;');
+			  }
+			 if (actionressults[0] === "Fail")
+			  {
+				document.getElementById('UID').value = "";
+			 	document.getElementById('eMessErr').innerHTML = actionressults[1];
+			 	document.getElementById('eMessErr').setAttribute('style', 'display:block;');
+			  }
+
+			 if (actionressults[0] != "Fail" && actionressults[0] != "Success")
+			  {
+				document.getElementById('UID').value = "";
+				alert('Something wrong with log in');
+			  }
+
+	    }
+	 }
+	 http.send(params);
+}
 
 
 
