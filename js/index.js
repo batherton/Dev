@@ -64,9 +64,11 @@ var app = {
     CheckLogIn: function(){
 	if(document.getElementById('UID').value = "")
 	{
+alert('UID Blank');
 	 document.getElementById('LoginDiv').setAttribute('style', 'display:block;');
 
 
+alert('here is the Login form');
 	}
 
     },
