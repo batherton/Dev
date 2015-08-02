@@ -13,8 +13,8 @@ var app = {
 
         document.addEventListener('deviceready', this.onDeviceReady, false);
 
-       // document.addEventListener("offline", onOffline, false);
-       // document.addEventListener("online", onOnline, false);
+        document.addEventListener("offline", onOffline, false);
+        document.addEventListener("online", onOnline, false);
     },
 
     onDeviceReady: function() {
@@ -27,13 +27,21 @@ var app = {
 
 
     onOffline: function(){
-	//document.getElementById('NetworkConnectionType').value = "No network connection";
+	document.getElementById('ConnectionStatus').value = "Offline";
     },
     onOnline: function(){
-	//document.getElementById('NetworkConnectionType').value = "Online";
+	document.getElementById('ConnectionStatus').value = "Online";
     },
 
+
     receivedEvent: function(id) {
+
+
+	document.getElementById('DevicePlatform').value = device.platform;
+	document.getElementById('DeviceModel').value = device.model;
+	document.getElementById('DeviceID').value = device.uuid;
+	document.getElementById('DeviceVersion').value = device.version;
+	document.getElementById('ConnectionType').value = navigator.connection.type;
 
         var parentElement = document.getElementById(id);
 
@@ -48,11 +56,7 @@ var app = {
 
 
 
-	document.getElementById('DevicePlatform').value = device.platform;
-	document.getElementById('DeviceModel').value = device.model;
-	document.getElementById('DeviceID').value = device.uuid;
-	document.getElementById('DeviceVersion').value = device.version;
-	document.getElementById('ConnectionType').value = navigator.connection.type;
+
     },
     TrackingEvent: function(){
 	var TrackLocation = navigator.geolocation.watchPosition(onCurLocSuccess, onCurLocError, { maximumAge: 3000, enableHighAccuracy: true });
