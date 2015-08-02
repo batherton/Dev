@@ -13,8 +13,8 @@ var app = {
 
         document.addEventListener('deviceready', this.onDeviceReady, false);
 
-        //document.addEventListener("offline", onOffline, false);
-        //document.addEventListener("online", onOnline, false);
+        document.addEventListener("offline", onOffline, false);
+        document.addEventListener("online", onOnline, false);
     },
 
     onDeviceReady: function() {
