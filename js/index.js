@@ -66,6 +66,10 @@ alert('UID = '+document.getElementById('UID').value);
 	if(document.getElementById('UID').value = "")
 	{
 alert('UID Blank');
+
+	 document.getElementById('MainDiv').setAttribute('style', 'display:none;');
+
+
 	 document.getElementById('LoginDiv').setAttribute('style', 'display:block;');
 
 
