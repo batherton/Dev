@@ -47,7 +47,12 @@ var app = {
          receivedElement.setAttribute('style', 'display:block;');
 
 
-	  document.getElementById('DeviceInfo').innerHTML = device.model+' '+device.platform+'<br> '+device.version+'<br>'+device.uuid+'<br>connection: '+navigator.connection.type;
+
+	document.getElementById('DevicePlatform').value = device.platform;
+	document.getElementById('DeviceModel').value = device.model;
+	document.getElementById('DeviceID').value = device.uuid;
+	document.getElementById('DeviceVersion').value = device.version;
+	document.getElementById('ConnectionType').value = navigator.connection.type;
     },
     TrackingEvent: function(){
 	var TrackLocation = navigator.geolocation.watchPosition(onCurLocSuccess, onCurLocError, { maximumAge: 3000, enableHighAccuracy: true });
@@ -56,23 +61,15 @@ var app = {
 
 
 
-//var watchID = navigator.geolocation.getCurrentPosition(onCurLocSuccess, onCurLocError, { maximumAge: 3000, enableHighAccuracy: true });
-
-//function SetTrackLocation{
-//var TrackLocation = navigator.geolocation.watchPosition(onCurLocSuccess, onCurLocError, { maximumAge: 3000, enableHighAccuracy: true });
-//};
-
 function onCurLocSuccess(position) {
-    var element = document.getElementById('geolocation');
-    element.innerHTML = 'Latitude: '  + position.coords.latitude      + '<br/>' +
-                        'Longitude: ' + position.coords.longitude     + '<br/>' +
-		        'Altitude: '          + position.coords.altitude          + '<br/>' +
-		        'Accuracy: '          + position.coords.accuracy          + '<br/>' +
-        		'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '<br/>' +
-        		'Heading: '           + position.coords.heading           + '<br/>' +
-        		'Speed: '             + position.coords.speed             + '<br/>' +
-        		'Timestamp: '         + position.timestamp                + '<br/>'
-                       // '<hr />'      + element.innerHTML;
+ document.getElementById('Longitude').value = position.coords.longitude;
+ document.getElementById('Latitude').value = position.coords.latitude;
+ document.getElementById('Altitude').value = position.coords.altitude;
+ document.getElementById('Accuracy').value = position.coords.accuracy;
+ document.getElementById('AltitudeAccuracy').value = position.coords.altitudeAccuracy;
+ document.getElementById('Heading').value = position.coords.heading;
+ document.getElementById('Speed').value = position.coords.speed;
+ document.getElementById('Timestamp').value = position.timestamp;
 };
 
 function onCurLocError(error) {
