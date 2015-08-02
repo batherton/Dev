@@ -158,7 +158,8 @@ if (errorc == ""){
 			 if (actionressults[0] != "Fail" && actionressults[0] != "Success")
 			  {
 				document.getElementById('UID').value = "";
-				alert('Something wrong with log in');
+				navigator.notification.alert('Something wrong with log in', alertCallback, 'Error', 'Ok')
+				//alert('Something wrong with log in');
 			  }
 
 	    }
@@ -168,7 +169,10 @@ if (errorc == ""){
 }
 
 
+function alertCallback(){
 
+
+}
 
 
 
