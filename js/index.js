@@ -157,9 +157,16 @@ if (errorc == ""){
 
 			 if (actionressults[0] != "Fail" && actionressults[0] != "Success")
 			  {
-				document.getElementById('UID').value = "";
-				navigator.notification.alert('Something wrong with log in', alertCallback, 'Error', 'Ok')
-				//alert('Something wrong with log in');
+				var networkState = navigator.connection.type;
+
+				if(networkState == "NONE")
+				{
+					document.getElementById('UID').value = "";
+					navigator.notification.alert('Could not connect to network', alertCallback, 'Error', 'Ok')
+				}else{
+					document.getElementById('UID').value = "";
+					navigator.notification.alert('Something wrong with log in', alertCallback, 'Error', 'Ok')
+				}
 			  }
 
 	    }
