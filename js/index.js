@@ -13,8 +13,8 @@ var app = {
 
         document.addEventListener('deviceready', this.onDeviceReady, false);
 
-        document.addEventListener("offline", onOffline, false);
-        document.addEventListener("online", onOnline, false);
+        //document.addEventListener('offline', onOffline, false);
+        //document.addEventListener('online', onOnline, false);
     },
 
     onDeviceReady: function() {
@@ -26,12 +26,12 @@ var app = {
     },
 
 
-    onOffline: function(){
-	document.getElementById('ConnectionStatus').value = "Offline";
-    },
-    onOnline: function(){
-	document.getElementById('ConnectionStatus').value = "Online";
-    },
+    //onOffline: function(){
+    //	document.getElementById('ConnectionStatus').value = "Offline";
+    //},
+    //onOnline: function(){
+    //	document.getElementById('ConnectionStatus').value = "Online";
+    //},
 
 
     receivedEvent: function(id) {
@@ -39,14 +39,16 @@ var app = {
 
         var parentElement = document.getElementById(id);
 
-        var listeningElement = parentElement.querySelector('.listening');
 
-        var receivedElement = parentElement.querySelector('.received');
+        //var listeningElement = parentElement.querySelector('.listening');
+
+        //var receivedElement = parentElement.querySelector('.received');
 
 
-         listeningElement.setAttribute('style', 'display:none;');
 
-         receivedElement.setAttribute('style', 'display:block;');
+         //listeningElement.setAttribute('style', 'display:none;');
+
+         //receivedElement.setAttribute('style', 'display:block;');
 
 
 
