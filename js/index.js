@@ -62,6 +62,7 @@ var app = {
     },
 
     CheckLogIn: function(){
+alert('UID = '+document.getElementById('UID').value);
 	if(document.getElementById('UID').value = "")
 	{
 alert('UID Blank');
