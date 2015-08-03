@@ -249,10 +249,10 @@ function doOnOrientationChange()
 
 
 	 document.getElementById('IveFallenOver').setAttribute('style', 'display:block;');
-       // alert('landscape');
+        alert('landscape');
        // break; 
       default:
-       // alert('portrait');
+        alert('portrait');
        // break; 
 	 document.getElementById('IveFallenOver').setAttribute('style', 'display:none;');
 	 document.getElementById('TopAppMenu').setAttribute('style', 'display:block;');
