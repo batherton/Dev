@@ -70,6 +70,13 @@ var app = {
 	 document.getElementById('LoginDiv').setAttribute('style', 'display:block;');
 
 
+	}else{
+	 document.getElementById('LoginDiv').setAttribute('style', 'display:none;');
+
+
+	 document.getElementById('MainDiv').setAttribute('style', 'display:block;');
+
+
 	}
 
     },
