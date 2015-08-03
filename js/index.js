@@ -37,7 +37,6 @@ var app = {
 
         var parentElement = document.getElementById(id);
 
-
         var listeningElement = parentElement.querySelector('.listening');
 
         var receivedElement = parentElement.querySelector('.received');
@@ -103,7 +102,6 @@ function onCurLocError(error) {
 
 
 function LogIn(){
-
  errorc = "";
  if (document.getElementById('UserName').value == "")
  {
@@ -125,7 +123,6 @@ function LogIn(){
    document.getElementById('Password').style.backgroundColor="white ";
  }
 if (errorc == ""){
-
 
 	 var http = new XMLHttpRequest();
 	 var url = "http://www.loadstatus.com/App/Login.asp";
@@ -267,7 +264,8 @@ function CloseCustomer(){
 
 
 function Camera(){
-navigator.camera.getPicture(onSuccess, onFail, { quality: 50,destinationType: Camera.DestinationType.FILE_URI });
+alert('camera');
+	var TakePic = navigator.camera.getPicture(onSuccess, onFail, { quality: 50,destinationType: Camera.DestinationType.FILE_URI });
 }
 function onSuccess(imageURI) {
     var image = document.getElementById('myImage');
