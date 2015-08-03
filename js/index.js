@@ -243,20 +243,35 @@ function doOnOrientationChange()
   {
     switch(window.orientation) 
     {  
-      case -90:
-      case 90:
+
+
+    case 0:
+	 document.getElementById('IveFallenOver').setAttribute('style', 'display:none;');
+	 document.getElementById('TopAppMenu').setAttribute('style', 'display:block;');
+
+
+        break;
+
+    case -90:
 	 document.getElementById('TopAppMenu').setAttribute('style', 'display:none;');
 
 
 	 document.getElementById('IveFallenOver').setAttribute('style', 'display:block;');
-        alert('landscape');
-        break; 
-      default:
-        alert('portrait');
-        break; 
+        break;
+
+    case 90:
+	 document.getElementById('TopAppMenu').setAttribute('style', 'display:none;');
+
+
+	 document.getElementById('IveFallenOver').setAttribute('style', 'display:block;');
+        break;
+
+    default:
 	 document.getElementById('IveFallenOver').setAttribute('style', 'display:none;');
 	 document.getElementById('TopAppMenu').setAttribute('style', 'display:block;');
 
+
+        break;
 
     }
   }
