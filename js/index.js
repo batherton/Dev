@@ -147,6 +147,7 @@ if (errorc == ""){
 
 			 	document.getElementById('LoginDiv').setAttribute('style', 'display:none;');
 			 	document.getElementById('eMessErr').setAttribute('style', 'display:none;');
+			 	document.getElementById('eMessErr').innerHTML = "";
 			  }
 			 if (actionressults[0] === "Fail")
 			  {
@@ -183,6 +184,37 @@ function alertCallback(){
 
 
 
+
+function LogInTest(){
+
+ errorc = "";
+ if (document.getElementById('UserName').value == "")
+ {
+   errorc += "1";
+   document.getElementById('UserName').style.backgroundColor="yellow ";
+ }
+ else
+ {
+   document.getElementById('UserName').style.backgroundColor="white ";
+ }
+
+ if (document.getElementById('Password').value == "")
+ {
+   errorc += "1";
+   document.getElementById('Password').style.backgroundColor="yellow ";
+ }
+ else
+ {
+   document.getElementById('Password').style.backgroundColor="white ";
+ }
+if (errorc == ""){
+
+ document.getElementById('UserName').value = "1";
+ document.getElementById('UFirstName').value = "Brian";
+ document.getElementById('ULastName').value = "Atherton";
+
+
+}
 
 
 
