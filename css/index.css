@@ -44,8 +44,9 @@ body {
     width:100%;
 }
 
-/* Portrait layout (default) */
 
+
+/* Portrait layout (default) */
 
 .app {
 
@@ -70,6 +71,7 @@ body {
                                    /* offset horizontal: half of text area width */
 
 }
+
 
 /* Landscape layout (with min-width) */
 
