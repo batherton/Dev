@@ -237,12 +237,14 @@ function LogInTest(){
  document.getElementById('UserName').value = "1";
  document.getElementById('UFirstName').value = "Brian";
  document.getElementById('ULastName').value = "Atherton";
- document.getElementById('MainDiv').setAttribute('style', 'display:block;');
+ //document.getElementById('MainDiv').setAttribute('style', 'display:block;');
 
 
- document.getElementById('LoginDiv').setAttribute('style', 'display:none;');
+ //document.getElementById('LoginDiv').setAttribute('style', 'display:none;');
 
 
+	 document.getElementById('LoginDiv').className = "loadhidden";
+	 document.getElementById('HomeScreen').className = "ShowSection";
  }
 }
 
@@ -253,7 +255,7 @@ function ShowCustomer(){
 }
 
 function CloseCustomer(){
- document.getElementById('HomeScreen').className = "appfull";
+ document.getElementById('HomeScreen').className = "ShowSection";
  document.getElementById('Customer').className = "HideSection";
 }
 
