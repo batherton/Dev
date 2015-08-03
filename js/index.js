@@ -68,9 +68,12 @@ var app = {
     CheckLogIn: function(){
 	if(document.getElementById('UID').value == "")
 	{
-	 document.getElementById('HomeScreen').setAttribute('style', 'display:none;');
+
+	 //document.getElementById('HomeScreen').setAttribute('style', 'display:none;');
 
 
+
+	 document.getElementById('HomeScreen').className = "loadhidden";
 	 document.getElementById('LoginDiv').setAttribute('style', 'display:block;');
 	 document.getElementById('BottomAppMenu').setAttribute('style', 'display:none;');
 	}
@@ -80,7 +83,8 @@ var app = {
 	 document.getElementById('LoginDiv').setAttribute('style', 'display:none;');
 
 
-	 document.getElementById('HomeScreen').setAttribute('style', 'display:block;');
+	 document.getElementById('HomeScreen').className = "appfull";
+	 //document.getElementById('HomeScreen').setAttribute('style', 'display:block;');
 
 
 	 document.getElementById('BottomAppMenu').setAttribute('style', 'display:block;');
