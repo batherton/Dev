@@ -68,7 +68,10 @@ var app = {
 	 document.getElementById('LoginDiv').setAttribute('style', 'display:block;');
 
 
-	}else{
+	}
+
+	if(document.getElementById('UID').value != "")
+	{
 	 document.getElementById('LoginDiv').setAttribute('style', 'display:none;');
 
 
