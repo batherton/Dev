@@ -34,7 +34,6 @@ var app = {
 
     receivedEvent: function(id) {
 
-
         var parentElement = document.getElementById(id);
 
         var listeningElement = parentElement.querySelector('.listening');
@@ -263,20 +262,20 @@ function CloseCustomer(){
 
 
 
-function Camera(){
+function GetAPic(){
 alert('camera');
-	var TakePic = navigator.camera.getPicture(onSuccess, onFail, { quality: 50,destinationType: Camera.DestinationType.FILE_URI });
-}
-function onSuccess(imageURI) {
+ navigator.camera.getPicture(onPicSuccess, onPicFail, { quality: 50,destinationType: Camera.DestinationType.FILE_URI });
+
+ function onPicSuccess(imageURI) {
     var image = document.getElementById('myImage');
     image.src = imageURI;
-}
+ };
 
-function onFail(message) {
+ function onPicFail(message) {
     alert('Failed because: ' + message);
+ };
+
 }
-
-
 
 
 
