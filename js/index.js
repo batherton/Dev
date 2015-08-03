@@ -72,10 +72,9 @@ var app = {
 	 //document.getElementById('HomeScreen').setAttribute('style', 'display:none;');
 
 
-
+	 //document.getElementById('LoginDiv').setAttribute('style', 'display:block;');
 	 document.getElementById('HomeScreen').className = "loadhidden";
 	 document.getElementById('LoginDiv').className = "ShowSection";
-	 //document.getElementById('LoginDiv').setAttribute('style', 'display:block;');
 	 document.getElementById('BottomAppMenu').setAttribute('style', 'display:none;');
 	}
 
@@ -84,11 +83,9 @@ var app = {
 	 //document.getElementById('LoginDiv').setAttribute('style', 'display:none;');
 
 
+	 //document.getElementById('HomeScreen').setAttribute('style', 'display:block;');
 	 document.getElementById('LoginDiv').className = "loadhidden";
 	 document.getElementById('HomeScreen').className = "ShowSection";
-	 //document.getElementById('HomeScreen').setAttribute('style', 'display:block;');
-
-
 	 document.getElementById('BottomAppMenu').setAttribute('style', 'display:block;');
          app.TrackingEvent();
 
@@ -163,12 +160,17 @@ if (errorc == ""){
 			 if (actionressults[0] === "Success")
 			  {
 				document.getElementById('UID').value = actionressults[1];
-			 	document.getElementById('HomeScreen').setAttribute('style', 'display:block;');
+
+			 	//document.getElementById('HomeScreen').setAttribute('style', 'display:block;');
 
 
-			 	document.getElementById('LoginDiv').setAttribute('style', 'display:none;');
+			 	//document.getElementById('LoginDiv').setAttribute('style', 'display:none;');
+
+				document.getElementById('HomeScreen').className = "ShowSection";
+				document.getElementById('LoginDiv').className = "HideSection";
 			 	document.getElementById('eMessErr').setAttribute('style', 'display:none;');
 			 	document.getElementById('eMessErr').innerHTML = "";
+				document.getElementById('BottomAppMenu').setAttribute('style', 'display:block;');
 			  }
 			 if (actionressults[0] === "Fail")
 			  {
