@@ -250,6 +250,27 @@ function doOnOrientationChange()
 	 document.getElementById('TopAppMenu').setAttribute('style', 'display:block;');
 
 
+
+		if(document.getElementById('UID').value == "")
+		{
+		 document.getElementById('MainDiv').setAttribute('style', 'display:none;');
+
+
+		 document.getElementById('LoginDiv').setAttribute('style', 'display:block;');
+
+
+		}
+
+		if(document.getElementById('UID').value != "")
+		{
+		 document.getElementById('MainDiv').setAttribute('style', 'display:block;');
+
+
+		 document.getElementById('LoginDiv').setAttribute('style', 'display:none;');
+
+
+		}
+
         break;
 
     case -90:
@@ -257,6 +278,12 @@ function doOnOrientationChange()
 
 
 	 document.getElementById('IveFallenOver').setAttribute('style', 'display:block;');
+	 document.getElementById('MainDiv').setAttribute('style', 'display:none;');
+
+
+	 document.getElementById('LoginDiv').setAttribute('style', 'display:none;');
+
+
         break;
 
     case 90:
@@ -264,6 +291,13 @@ function doOnOrientationChange()
 
 
 	 document.getElementById('IveFallenOver').setAttribute('style', 'display:block;');
+	 document.getElementById('MainDiv').setAttribute('style', 'display:none;');
+
+
+	 document.getElementById('LoginDiv').setAttribute('style', 'display:none;');
+
+
+
         break;
 
     default:
@@ -271,6 +305,26 @@ function doOnOrientationChange()
 	 document.getElementById('TopAppMenu').setAttribute('style', 'display:block;');
 
 
+
+		if(document.getElementById('UID').value == "")
+		{
+		 document.getElementById('MainDiv').setAttribute('style', 'display:none;');
+
+
+		 document.getElementById('LoginDiv').setAttribute('style', 'display:block;');
+
+
+		}
+
+		if(document.getElementById('UID').value != "")
+		{
+		 document.getElementById('MainDiv').setAttribute('style', 'display:block;');
+
+
+		 document.getElementById('LoginDiv').setAttribute('style', 'display:none;');
+
+
+		}
         break;
 
     }
