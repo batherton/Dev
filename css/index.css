@@ -316,7 +316,7 @@ line-height: 40px;
 display:none;
 }
 
-#appfull {
+.appfull {
 position:absolute;
 top:41px;
 left:0px;
