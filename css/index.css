@@ -318,6 +318,11 @@ font-weight: bold;
 color: #ffffff;
 vertical-align: middle;
 /*line-height: 40px;*/
+    -webkit-transition: all 0.7s ease-out;
+       -moz-transition: all 0.7s ease-out;
+        -ms-transition: all 0.7s ease-out;
+         -o-transition: all 0.7s ease-out;
+            transition: all 0.7s ease-out;
 }
 
 .HideSection {    
