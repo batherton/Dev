@@ -72,8 +72,7 @@ var app = {
 
 
 	 document.getElementById('LoginDiv').setAttribute('style', 'display:block;');
-
-
+	 document.getElementById('BottomAppMenu').setAttribute('style', 'display:none;');
 	}
 
 	if(document.getElementById('UID').value != "")
@@ -84,6 +83,7 @@ var app = {
 	 document.getElementById('HomeScreen').setAttribute('style', 'display:block;');
 
 
+	 document.getElementById('BottomAppMenu').setAttribute('style', 'display:block;');
          app.TrackingEvent();
 
 	}
