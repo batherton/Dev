@@ -226,6 +226,7 @@ function LogInTest(){
 
 	 document.getElementById('LoginDiv').className = "loadhidden";
 	 document.getElementById('HomeScreen').className = "ShowSection";
+	 document.getElementById('BottomAppMenu').setAttribute('style', 'display:block;')
  }
 }
 
@@ -268,7 +269,7 @@ function GetAPic(){
  function onPicSuccess(imageURI) {
     var image = document.getElementById('myImage');
     image.src = imageURI;
-alert(image.src);
+
  };
 
  function onPicFail(message) {
