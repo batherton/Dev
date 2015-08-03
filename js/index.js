@@ -245,15 +245,19 @@ function doOnOrientationChange()
     {  
       case -90:
       case 90:
+	 document.getElementById('TopAppMenu').setAttribute('style', 'display:none;');
+
+
 	 document.getElementById('IveFallenOver').setAttribute('style', 'display:block;');
-
-
        // alert('landscape');
        // break; 
       default:
        // alert('portrait');
        // break; 
 	 document.getElementById('IveFallenOver').setAttribute('style', 'display:none;');
+	 document.getElementById('TopAppMenu').setAttribute('style', 'display:block;');
+
+
     }
   }
 
