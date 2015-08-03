@@ -393,3 +393,20 @@ vertical-align: middle;
          -o-transition: all 0.7s ease-out;
             transition: all 0.7s ease-out;
 }
+
+.BottomMenu {
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #464646),
+        color-stop(0.51, #242424)
+    );
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	height:70px;
+	width:100%;
+	text-align: center;
+}
