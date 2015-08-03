@@ -157,7 +157,7 @@ if (errorc == ""){
 			 if (actionressults[0] === "Success")
 			  {
 				document.getElementById('UID').value = actionressults[1];
-			 	document.getElementById('MainDiv').setAttribute('style', 'display:block;');
+			 	document.getElementById('HomeScreen').setAttribute('style', 'display:block;');
 
 
 			 	document.getElementById('LoginDiv').setAttribute('style', 'display:none;');
