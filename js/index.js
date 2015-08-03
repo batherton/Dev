@@ -52,9 +52,10 @@ var app = {
 	document.getElementById('LoadScreen').setAttribute('style', 'display:none;');
 
 
-	document.getElementById('HomeScreen').setAttribute('style', 'display:block;');
+	//document.getElementById('HomeScreen').setAttribute('style', 'display:block;');
 
 
+	//document.getElementById('HomeScreen').className = "ShowSection";
 
 	document.getElementById('DevicePlatform').value = device.platform;
 	document.getElementById('DeviceModel').value = device.model;
