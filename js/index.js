@@ -238,5 +238,7 @@ function LogInTest(){
 }
 
 
-
+function ShowCustomer(){
+ document.getElementById('Customer').className = "ShowSection";
+}
 
