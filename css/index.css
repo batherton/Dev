@@ -403,7 +403,7 @@ vertical-align: middle;
         color-stop(0, #464646),
         color-stop(0.51, #242424)
     );
-	position:absolute;
+	position:fixed;
 	bottom:0px;
 	left:0px;
 	right:0px;
