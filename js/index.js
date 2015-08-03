@@ -275,4 +275,3 @@ function onFail(message) {
     alert('Failed because: ' + message);
 }
 
-}
