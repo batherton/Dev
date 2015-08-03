@@ -240,9 +240,11 @@ function LogInTest(){
 
 function ShowCustomer(){
  document.getElementById('Customer').className = "ShowSection";
+ document.getElementById('HomeScreen').className = "HideSection";
 }
 
 function CloseCustomer(){
+ document.getElementById('HomeScreen').className = "appfull";
  document.getElementById('Customer').className = "HideSection";
 }
 
