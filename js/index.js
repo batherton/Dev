@@ -213,6 +213,11 @@ if (errorc == ""){
  document.getElementById('UFirstName').value = "Brian";
  document.getElementById('ULastName').value = "Atherton";
 
+	 document.getElementById('MainDiv').setAttribute('style', 'display:block;');
+
+
+	 document.getElementById('LoginDiv').setAttribute('style', 'display:none;');
+
 
 }
 
