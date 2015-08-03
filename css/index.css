@@ -332,11 +332,11 @@ vertical-align: middle;
     left: -500px;    
     width: 500px;
     opacity: 1;    
-    -webkit-transition: all 0.7s ease-out;
-       -moz-transition: all 0.7s ease-out;
-        -ms-transition: all 0.7s ease-out;
-         -o-transition: all 0.7s ease-out;
-            transition: all 0.7s ease-out;
+    -webkit-transition: all 1.0s ease-out;
+       -moz-transition: all 1.0s ease-out;
+        -ms-transition: all 1.0s ease-out;
+         -o-transition: all 1.0s ease-out;
+            transition: all 1.0s ease-out;
 }
 
 .loadhidden {
@@ -361,11 +361,11 @@ font-weight: bold;
 color: #ffffff;
 vertical-align: middle;
     opacity: 1;    
-    -webkit-transition: all 0.7s ease-out;
-       -moz-transition: all 0.7s ease-out;
-        -ms-transition: all 0.7s ease-out;
-         -o-transition: all 0.7s ease-out;
-            transition: all 0.7s ease-out;
+    -webkit-transition: all 1.0s ease-out;
+       -moz-transition: all 1.0s ease-out;
+        -ms-transition: all 1.0s ease-out;
+         -o-transition: all 1.0s ease-out;
+            transition: all 1.0s ease-out;
 }
 
 .BottomMenu {
