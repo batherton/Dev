@@ -78,7 +78,7 @@ var app = {
 	 document.getElementById('MainDiv').setAttribute('style', 'display:block;');
 
 
-         app.TrackingEvent();
+        // app.TrackingEvent();
 
 	}
     },
