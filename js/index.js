@@ -44,9 +44,9 @@ var app = {
 
 
 
-         listeningElement.setAttribute('style', 'display:none;');
+        listeningElement.setAttribute('style', 'display:none;');
 
-         receivedElement.setAttribute('style', 'display:block;');
+        receivedElement.setAttribute('style', 'display:block;');
 
 
 
@@ -55,7 +55,7 @@ var app = {
 	document.getElementById('DeviceID').value = device.uuid;
 	document.getElementById('DeviceVersion').value = device.version;
 	document.getElementById('ConnectionType').value = navigator.connection.type;
-        app.CheckLogIn();
+        //app.CheckLogIn();
 
     },
 
@@ -221,11 +221,10 @@ if (errorc == ""){
  document.getElementById('UserName').value = "1";
  document.getElementById('UFirstName').value = "Brian";
  document.getElementById('ULastName').value = "Atherton";
+ document.getElementById('MainDiv').setAttribute('style', 'display:block;');
 
-	 document.getElementById('MainDiv').setAttribute('style', 'display:block;');
 
-
-	 document.getElementById('LoginDiv').setAttribute('style', 'display:none;');
+ document.getElementById('LoginDiv').setAttribute('style', 'display:none;');
 
 
 }
