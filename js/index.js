@@ -250,10 +250,10 @@ function doOnOrientationChange()
 
 	 document.getElementById('IveFallenOver').setAttribute('style', 'display:block;');
         alert('landscape');
-       // break; 
+        break; 
       default:
         alert('portrait');
-       // break; 
+        break; 
 	 document.getElementById('IveFallenOver').setAttribute('style', 'display:none;');
 	 document.getElementById('TopAppMenu').setAttribute('style', 'display:block;');
 
@@ -263,5 +263,36 @@ function doOnOrientationChange()
 
 
 
+function updateOrientation(e) {
+switch (e.orientation)
+{   
+    case 0:
+	 document.getElementById('IveFallenOver').setAttribute('style', 'display:none;');
+	 document.getElementById('TopAppMenu').setAttribute('style', 'display:block;');
 
+
+        break;
+
+    case -90:
+	 document.getElementById('TopAppMenu').setAttribute('style', 'display:none;');
+
+
+	 document.getElementById('IveFallenOver').setAttribute('style', 'display:block;');
+        break;
+
+    case 90:
+	 document.getElementById('TopAppMenu').setAttribute('style', 'display:none;');
+
+
+	 document.getElementById('IveFallenOver').setAttribute('style', 'display:block;');
+        break;
+
+    default:
+	 document.getElementById('IveFallenOver').setAttribute('style', 'display:none;');
+	 document.getElementById('TopAppMenu').setAttribute('style', 'display:block;');
+
+
+        break;
+    }
+}
 
