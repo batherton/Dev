@@ -411,3 +411,11 @@ vertical-align: middle;
 	width:100%;
 	text-align: center;
 }
+
+#MainDiv {
+position:absolute;
+top:41px;
+left:0px;
+right:0px;
+bottom:70px;
+}
