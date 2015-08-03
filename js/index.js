@@ -68,7 +68,7 @@ var app = {
     CheckLogIn: function(){
 	if(document.getElementById('UID').value == "")
 	{
-	 document.getElementById('MainDiv').setAttribute('style', 'display:none;');
+	 document.getElementById('HomeScreen').setAttribute('style', 'display:none;');
 
 
 	 document.getElementById('LoginDiv').setAttribute('style', 'display:block;');
@@ -81,7 +81,7 @@ var app = {
 	 document.getElementById('LoginDiv').setAttribute('style', 'display:none;');
 
 
-	 document.getElementById('MainDiv').setAttribute('style', 'display:block;');
+	 document.getElementById('HomeScreen').setAttribute('style', 'display:block;');
 
 
          app.TrackingEvent();
