@@ -239,6 +239,23 @@ function LogInTest(){
 
 
 
+function doOnOrientationChange()
+  {
+    switch(window.orientation) 
+    {  
+      case -90:
+      case 90:
+	 document.getElementById('IveFallenOver').setAttribute('style', 'display:block;');
+
+
+       // alert('landscape');
+       // break; 
+      default:
+       // alert('portrait');
+       // break; 
+	 document.getElementById('IveFallenOver').setAttribute('style', 'display:none;');
+    }
+  }
 
 
 

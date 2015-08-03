@@ -59,19 +59,7 @@
 		<div class="IconCell">&nbsp</div>
 		<div class="IconCell">&nbsp;</div>
 
-
-
-
 	</div><!-- Close HomeScreen -->
-
-
-
-
-
-
-
-
-
 
 </div>
 
@@ -119,6 +107,7 @@
   </div>
 
 <div id="eMessErr"></div>
+<div id="IveFallenOver"></div>
 
 <input type="hidden" id="UID" value="">
 <input type="hidden" id="UFirstName" value="">
@@ -146,31 +135,13 @@
 
             app.initialize();
 
+	    window.addEventListener('orientationchange', doOnOrientationChange);
+	      doOnOrientationChange();
         </script>
 
 
 
-<script>
 
-  function doOnOrientationChange()
-  {
-    switch(window.orientation) 
-    {  
-      case -90:
-      case 90:
-        alert('landscape');
-        break; 
-      default:
-        alert('portrait');
-        break; 
-    }
-  }
-
-  window.addEventListener('orientationchange', doOnOrientationChange);
-
-  // Initial execution if needed
-  doOnOrientationChange();
-</script>
 
     </body>
 
