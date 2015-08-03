@@ -74,15 +74,17 @@ var app = {
 
 
 	 document.getElementById('HomeScreen').className = "loadhidden";
-	 document.getElementById('LoginDiv').setAttribute('style', 'display:block;');
+	 document.getElementById('LoginDiv').className = "ShowSection";
+	 //document.getElementById('LoginDiv').setAttribute('style', 'display:block;');
 	 document.getElementById('BottomAppMenu').setAttribute('style', 'display:none;');
 	}
 
 	if(document.getElementById('UID').value != "")
 	{
-	 document.getElementById('LoginDiv').setAttribute('style', 'display:none;');
+	 //document.getElementById('LoginDiv').setAttribute('style', 'display:none;');
 
 
+	 document.getElementById('LoginDiv').className = "loadhidden";
 	 document.getElementById('HomeScreen').className = "ShowSection";
 	 //document.getElementById('HomeScreen').setAttribute('style', 'display:block;');
 

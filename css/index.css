@@ -289,7 +289,7 @@ background-color:#ff6666;
 display:none;
 }
 
-#LoginDiv {
+.LoginDiv {
 position:absolute;
 top:41px;
 left:0px;
@@ -352,9 +352,7 @@ top:0px;
 left:0px;
 right:0px;
 bottom:0px;
-
 background-color:#E4E4E4;
-
 
 font-family: Verdana, Arial, Helvetica, sans-serif;
 text-align: center;
