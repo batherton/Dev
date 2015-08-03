@@ -242,3 +242,7 @@ function ShowCustomer(){
  document.getElementById('Customer').className = "ShowSection";
 }
 
+function CloseCustomer(){
+ document.getElementById('Customer').className = "HideSection";
+}
+
