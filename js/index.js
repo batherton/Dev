@@ -21,8 +21,6 @@ var app = {
 
         app.receivedEvent('deviceready');
 
-        app.TrackingEvent();
-
     },
 
 
@@ -77,8 +75,9 @@ var app = {
 	 document.getElementById('MainDiv').setAttribute('style', 'display:block;');
 
 
-	}
+         app.TrackingEvent();
 
+	}
     },
 
     TrackingEvent: function(){
