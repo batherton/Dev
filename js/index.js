@@ -263,12 +263,12 @@ function CloseCustomer(){
 
 
 function GetAPic(){
-alert('camera');
  navigator.camera.getPicture(onPicSuccess, onPicFail, { quality: 75,destinationType: Camera.DestinationType.FILE_URI,saveToPhotoAlbum: true });
 
  function onPicSuccess(imageURI) {
     var image = document.getElementById('myImage');
     image.src = imageURI;
+alert(image.src);
  };
 
  function onPicFail(message) {
