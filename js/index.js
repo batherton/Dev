@@ -100,8 +100,8 @@ function onCurLocSuccess(position) {
 };
 
 function onCurLocError(error) {
-    //alert('code: '    + error.code    + '\n' +
-    //      'message: ' + error.message + '\n');
+    alert('code: '    + error.code    + '\n' +
+          'message: ' + error.message + '\n');
 };
 
 
