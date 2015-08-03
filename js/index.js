@@ -83,7 +83,7 @@ var app = {
 	 document.getElementById('LoginDiv').setAttribute('style', 'display:none;');
 
 
-	 document.getElementById('HomeScreen').className = "appfull";
+	 document.getElementById('HomeScreen').className = "ShowSection";
 	 //document.getElementById('HomeScreen').setAttribute('style', 'display:block;');
 
 
