@@ -48,14 +48,8 @@ var app = {
         //receivedElement.setAttribute('style', 'display:block;');
 
 
-
 	document.getElementById('LoadScreen').setAttribute('style', 'display:none;');
 
-
-	//document.getElementById('HomeScreen').setAttribute('style', 'display:block;');
-
-
-	//document.getElementById('HomeScreen').className = "ShowSection";
 
 	document.getElementById('DevicePlatform').value = device.platform;
 	document.getElementById('DeviceModel').value = device.model;
@@ -69,11 +63,6 @@ var app = {
     CheckLogIn: function(){
 	if(document.getElementById('UID').value == "")
 	{
-
-	 //document.getElementById('HomeScreen').setAttribute('style', 'display:none;');
-
-
-	 //document.getElementById('LoginDiv').setAttribute('style', 'display:block;');
 	 document.getElementById('HomeScreen').className = "loadhidden";
 	 document.getElementById('LoginDiv').className = "ShowSection";
 	 document.getElementById('BottomAppMenu').setAttribute('style', 'display:none;');
@@ -81,10 +70,6 @@ var app = {
 
 	if(document.getElementById('UID').value != "")
 	{
-	 //document.getElementById('LoginDiv').setAttribute('style', 'display:none;');
-
-
-	 //document.getElementById('HomeScreen').setAttribute('style', 'display:block;');
 	 document.getElementById('LoginDiv').className = "loadhidden";
 	 document.getElementById('HomeScreen').className = "ShowSection";
 	 document.getElementById('BottomAppMenu').setAttribute('style', 'display:block;');
@@ -260,18 +245,49 @@ function CloseCustomer(){
 }
 
 
-function Camera(){
-	navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
-	    destinationType: Camera.DestinationType.DATA_URL
-	});
-}
+//function Camera(){
+//	navigator.camera.getPicture(onSuccess, onFail, { quality: 50, destinationType: Camera.DestinationType.DATA_URL});
+//}
 
-function onSuccess(imageData) {
+//function onSuccess(imageData) {
+//    var image = document.getElementById('myImage');
+//    image.src = "data:image/jpeg;base64," + imageData;
+//}
+
+//function onFail(message) {
+//    alert('Failed because: ' + message);
+//}
+
+
+
+
+
+
+
+
+
+function Camera(){
+navigator.camera.getPicture(onSuccess, onFail, { quality: 50,destinationType: Camera.DestinationType.FILE_URI });
+}
+function onSuccess(imageURI) {
     var image = document.getElementById('myImage');
-    image.src = "data:image/jpeg;base64," + imageData;
+    image.src = imageURI;
 }
 
 function onFail(message) {
     alert('Failed because: ' + message);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
