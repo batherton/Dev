@@ -84,7 +84,6 @@ var app = {
 
 
 function onCurLocSuccess(position) {
-alert('got location');
  document.getElementById('Longitude').value = position.coords.longitude;
  document.getElementById('Latitude').value = position.coords.latitude;
  document.getElementById('Altitude').value = position.coords.altitude;
@@ -215,7 +214,7 @@ function LogInTest(){
  }
 
  if (errorc == ""){
-  document.getElementById('UserName').value = "1";
+  document.getElementById('UID').value = "1";
   document.getElementById('UFirstName').value = "Brian";
   document.getElementById('ULastName').value = "Atherton";
   document.getElementById('LoginDiv').className = "loadhidden";
