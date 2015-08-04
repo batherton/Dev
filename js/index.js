@@ -242,19 +242,22 @@ function CloseCustomer(){
 }
 
 
-//function Camera(){
-//	navigator.camera.getPicture(onSuccess, onFail, { quality: 50, destinationType: Camera.DestinationType.DATA_URL});
-//}
 
-//function onSuccess(imageData) {
-//    var image = document.getElementById('myImage');
-//    image.src = "data:image/jpeg;base64," + imageData;
-//}
+function playMP3() {
+    var mp3URL = getMediaURL("songs/EverythingIsAwesome.mp3");
+    var media = new Media(mp3URL, null, mediaError);
+    media.play();
+}
 
-//function onFail(message) {
-//    alert('Failed because: ' + message);
-//}
+function getMediaURL(s) {
+    if(device.platform.toLowerCase() === "android") return "/android_asset/www/" + s;
+    return s;
+}
 
+function mediaError(e) {
+    alert('Media Error');
+    alert(JSON.stringify(e));
+}
 
 
 
