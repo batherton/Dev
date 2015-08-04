@@ -152,7 +152,7 @@ if (errorc == ""){
 			 	document.getElementById('eMessErr').setAttribute('style', 'display:none;');
 			 	document.getElementById('eMessErr').innerHTML = "";
 				document.getElementById('BottomAppMenu').setAttribute('style', 'display:block;');
-				setInterval ('callbackfunc()', 60000);
+				setInterval (callbackfunc, 60000);
 			  }
 			 if (actionressults[0] === "Fail")
 			  {
@@ -260,6 +260,8 @@ function GetAPic(){
  };
 
 }
+
+
 
 function callbackfunc(){
  alert('Its been a minute');
