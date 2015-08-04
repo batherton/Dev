@@ -248,8 +248,9 @@ function GetAPic(){
  function onPicSuccess(imageURI) {
 alert('gotpic');
 alert(imageURI);
-    var image = document.getElementById('myImage');
-    image.src = imageURI;
+document.getElementById('myImage').src = imageURI;
+    //var image = document.getElementById('myImage');
+    //image.src = imageURI;
    // document.getElementById('myImageDiv').innerHTML = imageURI;
 
  };
