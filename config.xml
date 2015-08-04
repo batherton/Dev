@@ -40,8 +40,8 @@
 
     <preference name="android-installLocation" value="auto" />
 
-<preference name="exit-on-suspend" value="false" />
-<preference name="keepRunning" value="true" />
+    <preference name="exit-on-suspend" value="false" />
+    <preference name="keepRunning" value="true" />
     <gap:plugin name="org.apache.cordova.battery-status" />
 
     <gap:plugin name="org.apache.cordova.camera" />
@@ -78,6 +78,7 @@
 
     <gap:plugin name="org.apache.cordova.vibration" />
 
+    <gap:plugin name="de.appplant.cordova.plugin.background-mode" version="0.6.4" />
     <icon src="icon.png" />
 
     <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />

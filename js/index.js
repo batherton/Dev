@@ -15,6 +15,7 @@ var app = {
 
         //document.addEventListener('offline', onOffline, false);
         //document.addEventListener('online', onOnline, false);
+	cordova.plugins.backgroundMode.enable();
     },
 
     onDeviceReady: function() {
