@@ -70,10 +70,10 @@ var app = {
 	 document.getElementById('LoginDiv').className = "loadhidden";
 	 document.getElementById('HomeScreen').className = "ShowSection";
 	 document.getElementById('BottomAppMenu').setAttribute('style', 'display:block;');
-         app.TrackingEvent();
-
 	 setInterval ('callbackfunc()', 60000)
 	}
+	app.TrackingEvent();
+
     },
 
     TrackingEvent: function(){
