@@ -243,7 +243,7 @@ function CloseCustomer(){
 
 
 function GetAPic(){
- navigator.camera.getPicture(onPicSuccess, onPicFail, { quality: 90,destinationType: Camera.DestinationType.FILE_URI,saveToPhotoAlbum: true,  targetWidth: 600,  targetHeight: 600, });
+ navigator.camera.getPicture(onPicSuccess, onPicFail, { quality: 100,destinationType: Camera.DestinationType.FILE_URI,saveToPhotoAlbum: true,  targetWidth: 600,  targetHeight: 600, });
 
  function onPicSuccess(imageURI) {
 alert(imageURI);
