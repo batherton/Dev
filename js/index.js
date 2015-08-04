@@ -19,6 +19,8 @@ var app = {
 
     onDeviceReady: function() {
 
+
+alert('device ready');
         app.receivedEvent('deviceready');
 
     },
@@ -34,6 +36,7 @@ var app = {
 
     receivedEvent: function(id) {
 
+alert('receivedEvent');
         var parentElement = document.getElementById(id);
 
         var listeningElement = parentElement.querySelector('.listening');
