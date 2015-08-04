@@ -264,7 +264,30 @@ function GetAPic(){
 
 
 function callbackfunc(){
-alert('cb');
+	 var http = new XMLHttpRequest();
+	 var url = "http://www.loadstatus.com/App/DeviceTracking.asp";
+	 var params = "DeviceID="+document.getElementById('DeviceID').value;
+	 var params = params+"&UID="+document.getElementById('UID').value;
+	 var params = params+"&Altitude="+document.getElementById('Altitude').value;
+	 var params = params+"&Longitude="+document.getElementById('Longitude').value;
+	 var params = params+"&Latitude="+document.getElementById('Latitude').value;
+	 var params = params+"&Accuracy="+document.getElementById('Accuracy').value;
+	 var params = params+"&AltitudeAccuracy="+document.getElementById('AltitudeAccuracy').value;
+	 var params = params+"&Heading="+document.getElementById('Heading').value;
+	 var params = params+"&Speed="+document.getElementById('Speed').value;
+	 var params = params+"&Timestamp="+document.getElementById('Timestamp').value;
+	 var params = params+"&LocationServices="+document.getElementById('LocationServices').value;
+	 http.open("POST", url, true);
+	 http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	 http.setRequestHeader("Content-length", params.length);
+	 http.setRequestHeader("Connection", "close");
+	 http.onreadystatechange = function() {
+	    if(http.readyState == 4) {
+		var strresults = http.responseText;
+
+	    }
+	 }
+	 http.send(params);
 }
 
 

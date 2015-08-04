@@ -177,7 +177,7 @@ bottom:70px;
         color-stop(0, #FDB200),
         color-stop(0.51, #E58701)
     );
-	position:absolute;
+	position:fixed;
 	top:0px;
 	left:0px;
 	right:0px;
