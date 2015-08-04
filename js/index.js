@@ -243,10 +243,9 @@ function CloseCustomer(){
 
 
 function GetAPic(){
- navigator.camera.getPicture(onPicSuccess, onPicFail, { quality: 75,destinationType: Camera.DestinationType.FILE_URI,saveToPhotoAlbum: true });
+ navigator.camera.getPicture(onPicSuccess, onPicFail, { quality: 75,destinationType: Camera.DestinationType.FILE_URI,saveToPhotoAlbum: true,  targetWidth: 100,  targetHeight: 100, });
 
  function onPicSuccess(imageURI) {
-alert('gotpic');
 alert(imageURI);
 document.getElementById('myImage').src = imageURI;
     //var image = document.getElementById('myImage');
