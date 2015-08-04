@@ -152,7 +152,7 @@ if (errorc == ""){
 			 	document.getElementById('eMessErr').setAttribute('style', 'display:none;');
 			 	document.getElementById('eMessErr').innerHTML = "";
 				document.getElementById('BottomAppMenu').setAttribute('style', 'display:block;');
-				setInterval (callbackfunc, 60000);
+				//setInterval (callbackfunc, 60000);
 			  }
 			 if (actionressults[0] === "Fail")
 			  {
@@ -221,7 +221,7 @@ function LogInTest(){
  document.getElementById('LoginDiv').className = "loadhidden";
  document.getElementById('HomeScreen').className = "ShowSection";
  document.getElementById('BottomAppMenu').setAttribute('style', 'display:block;')
-  setInterval ('callbackfunc()', 60000);
+  //setInterval ('callbackfunc()', 60000);
  }
 }
 
