@@ -40,6 +40,8 @@
 
     <preference name="android-installLocation" value="auto" />
 
+<preference name="exit-on-suspend" value="false" />
+<preference name="keepRunning" value="true" />
     <gap:plugin name="org.apache.cordova.battery-status" />
 
     <gap:plugin name="org.apache.cordova.camera" />
