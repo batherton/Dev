@@ -236,7 +236,6 @@ function CloseCustomer(){
 }
 
 
-
 functon ShowHome(){
  document.getElementById('HomeScreen').className = "ShowSection";
  document.getElementById('Customer').className = "HideSection";
