@@ -72,6 +72,7 @@ var app = {
 	 document.getElementById('BottomAppMenu').setAttribute('style', 'display:block;');
          app.TrackingEvent();
 
+	 setInterval ('callbackfunc()', 60000)
 	}
     },
 
@@ -219,6 +220,7 @@ function LogInTest(){
   document.getElementById('LoginDiv').className = "loadhidden";
   document.getElementById('HomeScreen').className = "ShowSection";
   document.getElementById('BottomAppMenu').setAttribute('style', 'display:block;');
+  setInterval ('callbackfunc()', 60000);
  }
 }
 
@@ -261,7 +263,9 @@ function GetAPic(){
 
 
 
-
+function callbackfunc(){
+alert('cb');
+}
 
 
 
