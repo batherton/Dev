@@ -84,6 +84,7 @@ var app = {
 
 
 function onCurLocSuccess(position) {
+alert('got location');
  document.getElementById('Longitude').value = position.coords.longitude;
  document.getElementById('Latitude').value = position.coords.latitude;
  document.getElementById('Altitude').value = position.coords.altitude;
