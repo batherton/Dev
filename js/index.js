@@ -19,8 +19,6 @@ var app = {
 
     onDeviceReady: function() {
 
-
-alert('device ready');
         app.receivedEvent('deviceready');
 
     },
@@ -36,7 +34,6 @@ alert('device ready');
 
     receivedEvent: function(id) {
 
-alert('receivedEvent');
         var parentElement = document.getElementById(id);
 
         var listeningElement = parentElement.querySelector('.listening');
@@ -59,7 +56,7 @@ alert('receivedEvent');
 	document.getElementById('ConnectionType').value = navigator.connection.type;
         app.CheckLogIn();
 
-
+    },
     CheckLogIn: function(){
 	if(document.getElementById('UID').value == "")
 	{
@@ -123,7 +120,7 @@ function LogIn(){
  {
    document.getElementById('Password').style.backgroundColor="white ";
  }
-if (errorc == ""){
+ if (errorc == ""){
 
 	 var http = new XMLHttpRequest();
 	 var url = "http://www.loadstatus.com/App/Login.asp";
@@ -216,15 +213,16 @@ function LogInTest(){
  }
 
  if (errorc == ""){
-
- document.getElementById('UserName').value = "1";
- document.getElementById('UFirstName').value = "Brian";
- document.getElementById('ULastName').value = "Atherton";
- document.getElementById('LoginDiv').className = "loadhidden";
- document.getElementById('HomeScreen').className = "ShowSection";
- document.getElementById('BottomAppMenu').setAttribute('style', 'display:block;')
+  document.getElementById('UserName').value = "1";
+  document.getElementById('UFirstName').value = "Brian";
+  document.getElementById('ULastName').value = "Atherton";
+  document.getElementById('LoginDiv').className = "loadhidden";
+  document.getElementById('HomeScreen').className = "ShowSection";
+  document.getElementById('BottomAppMenu').setAttribute('style', 'display:block;');
  }
 }
+
+
 
 function ShowCustomer(){
  document.getElementById('Customer').className = "ShowSection";
@@ -237,7 +235,7 @@ function CloseCustomer(){
 }
 
 
-functon ShowHome(){
+function ShowHome(){
  document.getElementById('HomeScreen').className = "ShowSection";
  document.getElementById('Customer').className = "HideSection";
 }
