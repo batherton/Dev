@@ -56,7 +56,6 @@ var app = {
 	document.getElementById('ConnectionType').value = navigator.connection.type;
         app.CheckLogIn();
 
-	setInterval ('callbackfunc()', 60000);
 
     CheckLogIn: function(){
 	if(document.getElementById('UID').value == "")
@@ -153,6 +152,7 @@ if (errorc == ""){
 			 	document.getElementById('eMessErr').setAttribute('style', 'display:none;');
 			 	document.getElementById('eMessErr').innerHTML = "";
 				document.getElementById('BottomAppMenu').setAttribute('style', 'display:block;');
+				setInterval ('callbackfunc()', 60000);
 			  }
 			 if (actionressults[0] === "Fail")
 			  {
@@ -218,15 +218,10 @@ function LogInTest(){
  document.getElementById('UserName').value = "1";
  document.getElementById('UFirstName').value = "Brian";
  document.getElementById('ULastName').value = "Atherton";
- //document.getElementById('MainDiv').setAttribute('style', 'display:block;');
-
-
- //document.getElementById('LoginDiv').setAttribute('style', 'display:none;');
-
-
-	 document.getElementById('LoginDiv').className = "loadhidden";
-	 document.getElementById('HomeScreen').className = "ShowSection";
-	 document.getElementById('BottomAppMenu').setAttribute('style', 'display:block;')
+ document.getElementById('LoginDiv').className = "loadhidden";
+ document.getElementById('HomeScreen').className = "ShowSection";
+ document.getElementById('BottomAppMenu').setAttribute('style', 'display:block;')
+  setInterval ('callbackfunc()', 60000);
  }
 }
 
