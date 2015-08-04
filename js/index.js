@@ -287,7 +287,36 @@ function GetAPic(){
 
 
 
+//------------------------------------------------------------------------
+// Audio Functions
+//------------------------------------------------------------------------
+function getPhoneGapPath () {
+    'use strict';
+    var path = window.location.pathname;
+    var phoneGapPath = path.substring(0, path.lastIndexOf('/') + 1);
+    return phoneGapPath;
+}
+var my_media = null;
+var mediaTimer = null;
 
+function playAudio(src, srctype) {
+ if (srctype == "0"){
+	var resource = getPhoneGapPath() + src;
+ }
+ if (srctype == "1"){
+	var resource = src;
+ }
+    my_media = new Media(resource, onAudioSuccess, onAudioError);
+    my_media.play();
+}
+
+function onAudioSuccess() {
+    //console.log("playAudio():Audio Success");
+}
+function onAudioError(error) {
+   // alert('code: ' + error.code + '\n' +
+   //     'message: ' + error.message + '\n');
+}
 
 
 
