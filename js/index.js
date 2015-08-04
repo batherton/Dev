@@ -56,7 +56,7 @@ var app = {
 	document.getElementById('ConnectionType').value = navigator.connection.type;
         app.CheckLogIn();
 
-    },
+	setInterval ('callbackfunc()', 60000);
 
     CheckLogIn: function(){
 	if(document.getElementById('UID').value == "")
@@ -242,14 +242,20 @@ function CloseCustomer(){
 
 
 
+functon ShowHome(){
+ document.getElementById('HomeScreen').className = "ShowSection";
+ document.getElementById('Customer').className = "HideSection";
+}
+
+
+
 function GetAPic(){
  navigator.camera.getPicture(onPicSuccess, onPicFail, { quality: 100,destinationType: Camera.DestinationType.FILE_URI,saveToPhotoAlbum: true,  targetWidth: 600,  targetHeight: 600, });
 
  function onPicSuccess(imageURI) {
-alert(imageURI);
-document.getElementById('myImage').src = imageURI;
-    //var image = document.getElementById('myImage');
-    //image.src = imageURI;
+   //document.getElementById('myImage').src = imageURI;
+   //var image = document.getElementById('myImage');
+   //image.src = imageURI;
    // document.getElementById('myImageDiv').innerHTML = imageURI;
 
  };
@@ -260,7 +266,9 @@ document.getElementById('myImage').src = imageURI;
 
 }
 
-
+function callbackfunc(){
+ alert('Its been a minute');
+}
 
 
 
