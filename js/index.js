@@ -246,6 +246,7 @@ function GetAPic(){
  navigator.camera.getPicture(onPicSuccess, onPicFail, { quality: 75,destinationType: Camera.DestinationType.FILE_URI,saveToPhotoAlbum: true });
 
  function onPicSuccess(imageURI) {
+alert('gotpic');
     var image = document.getElementById('myImage');
     image.src = imageURI;
    // document.getElementById('myImageDiv').innerHTML = imageURI;
