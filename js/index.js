@@ -83,8 +83,9 @@ var app = {
 	var TrackLocation = navigator.geolocation.watchPosition(onCurLocSuccess, onCurLocError, { maximumAge: 3000, enableHighAccuracy: true });
     },
     JailBreakDetect: function(){
-alert('checking jb');
-	var JailBreak = jailbreakdetection.isJailbroken(jbsuccessCallback, jbfailureCallback);
+	alert('checking jb');
+	 var JailBreak = jailbreakdetection.isJailbroken(jbsuccessCallback, jbfailureCallback);
+	alert('did it work');
     }
 };
 
