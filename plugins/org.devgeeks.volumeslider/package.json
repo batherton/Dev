@@ -1,0 +1,24 @@
+{
+    "version": "1.0.0",
+    "name": "org.devgeeks.volumeslider",
+    "cordova_name": "VolumeSlider",
+    "description": "Show a volume slider to change the volume of the app without the physical buttons",
+    "license": "MIT License",
+    "keywords": [
+        "volume",
+        " slider",
+        " change",
+        " set",
+        " sound",
+        " ios"
+    ],
+    "platforms": [
+        "ios"
+    ],
+    "engines": [
+        {
+            "name": "cordova",
+            "version": ">=3.0.0"
+        }
+    ]
+}

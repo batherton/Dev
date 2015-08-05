@@ -1,0 +1,10 @@
+{
+    "org.devgeeks.volumeslider": {
+        "source": {
+            "type": "registry",
+            "id": "org.devgeeks.volumeslider"
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}
