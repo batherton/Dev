@@ -55,10 +55,10 @@ var app = {
 	document.getElementById('DeviceID').value = device.uuid;
 	document.getElementById('DeviceVersion').value = device.version;
 	document.getElementById('ConnectionType').value = navigator.connection.type;
-	app.JailBreakDetect();
+	//app.JailBreakDetect();
 
 
-        //app.CheckLogIn();
+        app.CheckLogIn();
 
     },
     CheckLogIn: function(){
@@ -76,7 +76,7 @@ var app = {
 	 document.getElementById('BottomAppMenu').setAttribute('style', 'display:block;');
 	 setInterval ('callbackfunc()', 60000);
 	}
-	//app.TrackingEvent();
+	app.TrackingEvent();
 
     },
 
