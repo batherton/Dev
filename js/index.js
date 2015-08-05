@@ -74,7 +74,7 @@ var app = {
 	 document.getElementById('LoginDiv').className = "loadhidden";
 	 document.getElementById('HomeScreen').className = "ShowSection";
 	 document.getElementById('BottomAppMenu').setAttribute('style', 'display:block;');
-	 setInterval ('callbackfunc()', 60000)
+	 setInterval ('callbackfunc()', 60000);
 	}
 	//app.TrackingEvent();
 
@@ -100,6 +100,34 @@ function jbsuccessCallback(jb){
 function jbfailureCallback(){
  alert('error getting jailbroken status');
 }
+
+
+function Flashlight(){
+	window.plugins.flashlight.available(function(isAvailable) {
+	  if (isAvailable) {
+
+	    // switch on
+	    window.plugins.flashlight.switchOn(); // success/error callbacks may be passed
+
+	    // switch off after 3 seconds
+	    setTimeout(function() {
+	      window.plugins.flashlight.switchOff(); // success/error callbacks may be passed
+	    }, 3000);
+	
+	  } else {
+	    alert("Flashlight not available on this device");
+	  }
+	});
+}
+
+
+
+
+
+
+
+
+
 
 
 
