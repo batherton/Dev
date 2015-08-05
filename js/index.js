@@ -15,13 +15,16 @@ var app = {
 
         //document.addEventListener('offline', onOffline, false);
         //document.addEventListener('online', onOnline, false);
-	cordova.plugins.backgroundMode.enable();
     },
 
     onDeviceReady: function() {
 
         app.receivedEvent('deviceready');
 
+		cordova.plugins.backgroundMode.enable();
+    		var volumeSlider = window.plugins.volumeSlider;
+    		volumeSlider.createVolumeSlider(10,350,300,30); // origin x, origin y, width, height
+    		volumeSlider.showVolumeSlider();
     },
 
 
