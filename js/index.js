@@ -13,25 +13,14 @@ var app = {
 
         document.addEventListener('deviceready', this.onDeviceReady, false);
 
-        //document.addEventListener('offline', onOffline, false);
-        //document.addEventListener('online', onOnline, false);
     },
 
     onDeviceReady: function() {
 
         app.receivedEvent('deviceready');
 
-		//cordova.plugins.backgroundMode.enable();
+	//cordova.plugins.backgroundMode.enable();
     },
-
-
-    //onOffline: function(){
-    //	document.getElementById('ConnectionStatus').value = "Offline";
-    //},
-    //onOnline: function(){
-    //	document.getElementById('ConnectionStatus').value = "Online";
-    //},
-
 
     receivedEvent: function(id) {
 

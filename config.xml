@@ -78,7 +78,6 @@
 
     <gap:plugin name="org.apache.cordova.vibration" />
 
-    <gap:plugin name="nl.x-services.plugins.flashlight" />
     <gap:plugin name="uk.co.ilee.jailbreakdetection" />
 
     <icon src="icon.png" />
