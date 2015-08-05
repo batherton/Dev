@@ -71,7 +71,6 @@ var app = {
 	 document.getElementById('LoginDiv').className = "loadhidden";
 	 document.getElementById('HomeScreen').className = "ShowSection";
 	 document.getElementById('BottomAppMenu').setAttribute('style', 'display:block;');
-
 	 setInterval ('callbackfunc()', 60000)
 	}
 	app.TrackingEvent();
@@ -80,6 +79,9 @@ var app = {
 
     TrackingEvent: function(){
 	var TrackLocation = navigator.geolocation.watchPosition(onCurLocSuccess, onCurLocError, { maximumAge: 3000, enableHighAccuracy: true });
+	app.JailBreakDetect();
+
+
     },
     JailBreakDetect: function(){
 	var JailBreak = jailbreakdetection.isJailbroken(jbsuccessCallback, jbfailureCallback);
@@ -89,12 +91,12 @@ var app = {
 
 
 function jbsuccessCallback(jb){
-alert('jailbroken status = '+jb);
+ alert('jailbroken status = '+jb);
 }
 
 
 function jbfailureCallback(){
-alert('error getting jailbroken status');
+ alert('error getting jailbroken status');
 }
 
 

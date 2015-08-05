@@ -79,8 +79,8 @@
     <gap:plugin name="org.apache.cordova.vibration" />
 
 
-<gap:plugin name="uk.co.ilee.jailbreakdetection" version="0.1.0" />
-    <gap:plugin name="de.appplant.cordova.plugin.background-mode" version="0.6.4" />
+    <gap:plugin name="uk.co.ilee.jailbreakdetection" />
+
     <icon src="icon.png" />
 
     <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
