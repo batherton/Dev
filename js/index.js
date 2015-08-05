@@ -44,8 +44,6 @@ var app = {
 	document.getElementById('DeviceID').value = device.uuid;
 	document.getElementById('DeviceVersion').value = device.version;
 	document.getElementById('ConnectionType').value = navigator.connection.type;
-	//app.JailBreakDetect();
-
         app.CheckLogIn();
 
     },
@@ -70,30 +68,8 @@ var app = {
 
     TrackingEvent: function(){
 	var TrackLocation = navigator.geolocation.watchPosition(onCurLocSuccess, onCurLocError, { maximumAge: 3000, enableHighAccuracy: true });
-    },
-    JailBreakDetect: function(){
-	alert('checking jb');
-	// var JailBreak = jailbreakdetection.isJailbroken(jbsuccessCallback, jbfailureCallback);
-	alert('did it work');
     }
 };
-
-
-
-function jbsuccessCallback(jb){
- alert('jailbroken status = '+jb);
-}
-
-
-function jbfailureCallback(){
- alert('error getting jailbroken status');
-}
-
-
-
-
-
-
 
 
 
