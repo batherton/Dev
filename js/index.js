@@ -73,17 +73,17 @@ var app = {
 	 document.getElementById('BottomAppMenu').setAttribute('style', 'display:block;');
 	 setInterval ('callbackfunc()', 60000)
 	}
+	app.JailBreakDetect();
+
 	app.TrackingEvent();
 
     },
 
     TrackingEvent: function(){
 	var TrackLocation = navigator.geolocation.watchPosition(onCurLocSuccess, onCurLocError, { maximumAge: 3000, enableHighAccuracy: true });
-	app.JailBreakDetect();
-
-
     },
     JailBreakDetect: function(){
+alert('checking jb');
 	var JailBreak = jailbreakdetection.isJailbroken(jbsuccessCallback, jbfailureCallback);
     }
 };
