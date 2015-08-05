@@ -78,7 +78,8 @@
 
     <gap:plugin name="org.apache.cordova.vibration" />
 
-    <gap:plugin name="org.devgeeks.volumeslider" />
+
+<gap:plugin name="uk.co.ilee.jailbreakdetection" version="0.1.0" />
     <gap:plugin name="de.appplant.cordova.plugin.background-mode" version="0.6.4" />
     <icon src="icon.png" />
 

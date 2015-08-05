@@ -72,10 +72,6 @@ var app = {
 	 document.getElementById('HomeScreen').className = "ShowSection";
 	 document.getElementById('BottomAppMenu').setAttribute('style', 'display:block;');
 
-    		var volumeSlider = window.plugins.volumeSlider;
-    		volumeSlider.createVolumeSlider(10,350,300,30); // origin x, origin y, width, height
-    		volumeSlider.showVolumeSlider();
-
 	 setInterval ('callbackfunc()', 60000)
 	}
 	app.TrackingEvent();
@@ -84,8 +80,23 @@ var app = {
 
     TrackingEvent: function(){
 	var TrackLocation = navigator.geolocation.watchPosition(onCurLocSuccess, onCurLocError, { maximumAge: 3000, enableHighAccuracy: true });
+    },
+    JailBreakDetect: function(){
+	var JailBreak = jailbreakdetection.isJailbroken(jbsuccessCallback, jbfailureCallback);
     }
 };
+
+
+
+function jbsuccessCallback(jb){
+alert('jailbroken status = '+jb);
+}
+
+
+function jbfailureCallback(){
+alert('error getting jailbroken status');
+}
+
 
 
 
