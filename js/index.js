@@ -287,8 +287,8 @@ function callbackfunc(){
 
 
 function Flashlight(){
-
-window.plugins.flashlight.available(function(isAvailable) {
+alert('test fl');
+var Flashlite = window.plugins.flashlight.available(function(isAvailable) {
   if (isAvailable) {
 
     // switch on
