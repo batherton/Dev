@@ -21,10 +21,7 @@ var app = {
 
         app.receivedEvent('deviceready');
 
-		cordova.plugins.backgroundMode.enable();
-    		var volumeSlider = window.plugins.volumeSlider;
-    		volumeSlider.createVolumeSlider(10,350,300,30); // origin x, origin y, width, height
-    		volumeSlider.showVolumeSlider();
+		//cordova.plugins.backgroundMode.enable();
     },
 
 
@@ -74,6 +71,11 @@ var app = {
 	 document.getElementById('LoginDiv').className = "loadhidden";
 	 document.getElementById('HomeScreen').className = "ShowSection";
 	 document.getElementById('BottomAppMenu').setAttribute('style', 'display:block;');
+
+    		var volumeSlider = window.plugins.volumeSlider;
+    		volumeSlider.createVolumeSlider(10,350,300,30); // origin x, origin y, width, height
+    		volumeSlider.showVolumeSlider();
+
 	 setInterval ('callbackfunc()', 60000)
 	}
 	app.TrackingEvent();
