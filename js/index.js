@@ -286,6 +286,7 @@ function callbackfunc(){
 }
 
 function DPicker(){
+alert('test');
 	var options = {
 	  date: new Date(),
 	  mode: 'date'
