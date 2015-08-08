@@ -90,7 +90,7 @@
 		<div id="CanvasIcon" class="IconCell"><img src="img/icon_canvas.png"><br>Canvas</div>
 		<div id="CameraIcon" class="IconCell" OnClick="GetAPic()"><img src="img/icon_camera.png"><br>Camera</div>
 		<div id="MapIcon" class="IconCell"><img src="img/icon_map.png"><br>Map</div>
-		<div id="CalculatorIcon" class="IconCell"><img src="img/icon_calculator.png"><br>Calculator</div>
+		<div id="CalculatorIcon" class="IconCell"><img src="img/icon_calculator.png" OnClick="ShowCalculator();"><br>Calculator</div>
 		<div id="SettingsIcon" class="IconCell"><img src="img/icon_gear.png"><br>Settings</div>
 		<div id="TasksIcon" class="IconCell"><img src="img/icon_task.png"><br>Tasks</div>
 		<div id="ChatIcon" class="IconCell"><img src="img/icon_chat.png"><br>Chat</div>
@@ -113,7 +113,7 @@
 	<div id="Customer" class="loadhidden">
 	  <table width="100%" cellpadding="0" cellspacing="0" border="0">
 	   <tr>
-	    <td OnClick="CloseCustomer()">click here</td>
+	    <td OnClick="ShowHome()">click here</td>
 	   </tr>
 	   <tr>
 	    <td></td>
@@ -139,7 +139,7 @@
 <div id="BottomAppMenu" class="BottomMenu">
  <table width="100%" height="69" cellpadding="0" cellspacing="0" border="0">
   <tr>
-   <td class="BottomMenuLeftButton" align="center" valign="middle" width="25%" id="HomeButton"><img src="img/home_grey_30.png"><br>HOME</td>
+   <td class="BottomMenuLeftButton" align="center" valign="middle" width="25%" id="HomeButton"><img src="img/home_grey_30.png" OnClick="ShowHome()"><br>HOME</td>
    <td class="BottomMenuButton" align="center" valign="middle" width="25%" id="CalendarButton"><img src="img/calendar_grey_30.png"><br>CALENDAR</td>
    <td class="BottomMenuButton" align="center" valign="middle" width="25%" id="MessagesButton"><img src="img/messages_grey_30.png"><br>MESSAGES</td>
    <td class="BottomMenuRightButton" align="center" valign="middle" width="25%" id="LocationButton"><img src="img/location_grey_30.png"><br>Location</td>

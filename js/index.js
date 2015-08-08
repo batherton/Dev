@@ -222,19 +222,20 @@ function LogInTest(){
 
 
 function ShowCustomer(){
- document.getElementById('Customer').className = "ShowSection";
+ document.getElementById('CustomerDiv').className = "ShowSection";
+ document.getElementById('HomeScreen').className = "HideSection";
+ document.getElementById('CalculatorDiv').className = "HideSection";
+}
+
+function ShowCalculator(){
+ document.getElementById('CalculatorDiv').className = "ShowSection";
  document.getElementById('HomeScreen').className = "HideSection";
 }
 
-function CloseCustomer(){
- document.getElementById('HomeScreen').className = "ShowSection";
- document.getElementById('Customer').className = "HideSection";
-}
-
-
 function ShowHome(){
  document.getElementById('HomeScreen').className = "ShowSection";
- document.getElementById('Customer').className = "HideSection";
+ document.getElementById('CustomerDiv').className = "HideSection";
+ document.getElementById('CalculatorDiv').className = "HideSection";
 }
 
 
