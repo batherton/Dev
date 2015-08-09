@@ -305,10 +305,9 @@ function callbackfunc(){
 
 
 function Flashlight(){
-alert('Flashlight');
  window.plugins.flashlight.available(function(isAvailable) {
   if (isAvailable) {
-
+alert('lashlight available');
     // switch on
     window.plugins.flashlight.switchOn(); // success/error callbacks may be passed
 
@@ -321,6 +320,7 @@ alert('Flashlight');
     alert("Flashlight not available on this device");
   }
 });
+
 }
 
 
