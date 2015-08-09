@@ -80,6 +80,8 @@
 
     <gap:plugin name="de.appplant.cordova.plugin.background-mode-imbxl" version="0.6.4" />
 
+    <gap:plugin name="nl.x-services.plugins.flashlight" />
+
     <icon src="icon.png" />
 
     <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/icon-36-ldpi.png" />
