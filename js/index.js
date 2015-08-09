@@ -20,12 +20,12 @@ var app = {
         app.receivedEvent('deviceready');
 
 	//cordova.plugins.backgroundMode.enable();
+	cordova.plugins.backgroundMode.enable();
+	cordova.plugins.backgroundMode.onactivate = function () {alert('test background');},
     },
 
     receivedEvent: function(id) {
 
-	cordova.plugins.backgroundMode.enable();
-	cordova.plugins.backgroundMode.onactivate = function () {alert('test background');},
         var parentElement = document.getElementById(id);
 
         var listeningElement = parentElement.querySelector('.listening');
