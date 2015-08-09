@@ -80,7 +80,7 @@
 
     <gap:plugin name="de.appplant.cordova.plugin.background-mode-imbxl" version="0.6.4" />
 
-    <gap:plugin name="nl.x-services.plugins.flashlight" />
+    <gap:plugin name="nl.x-services.plugins.flashlight" version="2.0.0" />
 
     <icon src="icon.png" />
 
