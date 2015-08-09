@@ -21,7 +21,9 @@ var app = {
 
 	//cordova.plugins.backgroundMode.enable();
 	cordova.plugins.backgroundMode.enable();
-	//cordova.plugins.backgroundMode.onactivate = function () {alert('test background');},
+	cordova.plugins.backgroundMode.onactivate = function () {
+		alert('test background');
+	}
     },
 
     receivedEvent: function(id) {
