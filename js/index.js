@@ -225,17 +225,28 @@ function ShowCustomer(){
  document.getElementById('CustomerDiv').className = "ShowSection";
  document.getElementById('HomeScreen').className = "HideSection";
  document.getElementById('CalculatorDiv').className = "HideSection";
+ document.getElementById('CalendarDiv').className = "HideSection";
 }
 
 function ShowCalculator(){
- document.getElementById('CalculatorDiv').className = "ShowSection";
+ document.getElementById('CustomerDiv').className = "HideSection";
  document.getElementById('HomeScreen').className = "HideSection";
+ document.getElementById('CalendarDiv').className = "HideSection";
+ document.getElementById('CalculatorDiv').className = "ShowSection";
+}
+
+function ShowCalendar(){
+ document.getElementById('CalendarDiv').className = "ShowSection";
+ document.getElementById('CustomerDiv').className = "HideSection";
+ document.getElementById('HomeScreen').className = "HideSection";
+ document.getElementById('CalculatorDiv').className = "HideSection";
 }
 
 function ShowHome(){
- document.getElementById('HomeScreen').className = "ShowSection";
  document.getElementById('CustomerDiv').className = "HideSection";
  document.getElementById('CalculatorDiv').className = "HideSection";
+ document.getElementById('CalendarDiv').className = "HideSection";
+ document.getElementById('HomeScreen').className = "ShowSection";
 }
 
 
@@ -286,17 +297,7 @@ function callbackfunc(){
 	 http.send(params);
 }
 
-function DPicker(){
-alert('test');
-	var options = {
-	  date: new Date(),
-	  mode: 'date'
-	};
 
-	datePicker.show(options, function(date){
-	  alert("date result " + date);  
-	});
-}
 
 
 
