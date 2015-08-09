@@ -305,6 +305,7 @@ function callbackfunc(){
 
 
 function Flashlight(){
+alert('Flashlight');
  window.plugins.flashlight.available(function(isAvailable) {
   if (isAvailable) {
 
