@@ -19,6 +19,8 @@ var app = {
 
         app.receivedEvent('deviceready');
 
+
+	cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
 	//cordova.plugins.backgroundMode.enable();
 	cordova.plugins.backgroundMode.enable();
 	cordova.plugins.backgroundMode.onactivate = function () {
@@ -37,9 +39,6 @@ var app = {
 
 
         listeningElement.setAttribute('style', 'display:none;');
-
-        //receivedElement.setAttribute('style', 'display:block;');
-
 
 	document.getElementById('LoadScreen').setAttribute('style', 'display:none;');
 

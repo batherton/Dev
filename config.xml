@@ -78,11 +78,11 @@
 
     <gap:plugin name="org.apache.cordova.vibration" />
 
+    <gap:plugin name="com.ionic.keyboard" version="1.0.3" />
+
     <gap:plugin name="com.phonegap.plugins.barcodescanner" version="2.2.0" />
 
     <gap:plugin name="de.appplant.cordova.plugin.background-mode-imbxl" version="0.6.4" />
-
-    <gap:plugin name="com.telerik.plugins.nativepagetransitions" version="0.2.2" />
 
     <icon src="icon.png" />
 
@@ -163,6 +163,10 @@
         <allow-intent href="itms-apps:*" />
 
     </platform>
+
+        <feature name="Keyboard">
+            <param name="ios-package" value="IonicKeyboard" onload="true" />
+        </feature>
 
 </widget>
 
