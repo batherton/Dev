@@ -78,11 +78,6 @@ var app = {
 
 
 
-
-
-
-
-
 function onCurLocSuccess(position) {
  document.getElementById('Longitude').value = position.coords.longitude;
  document.getElementById('Latitude').value = position.coords.latitude;

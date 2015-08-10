@@ -116,7 +116,17 @@ function barcodescan(){
 		<div id="InpirationIcon" class="IconCell"><img src="img/icon_play.png"  OnClick="playAudio('http://www.netmet.com/music/EverythingIsAwesome.mp3','1');"><br>Inpiration</div>
 		<div id="WeatherIcon" class="IconCell"><img src="img/icon_weather.png" OnClick="window.plugins.flashlight.switchOn();"><br>Weather</div>
 		<div id="CallTomIcon" class="IconCell"><img src="img/icon_surprised.png" OnClick="window.plugins.flashlight.switchOff();"><br>Quick Call Tom!</div>
-		<div id="LogoutIcon" class="IconCell"><img src="img/icon_logout.png" OnClick="barcodescan();"><br>Logout</div>
+		<div id="LogoutIcon" class="IconCell"><img src="img/icon_logout.png" OnClick="cordova.plugins.barcodeScanner.scan(
+      function (result) {
+          alert("We got a barcode\n" +
+                "Result: " + result.text + "\n" +
+                "Format: " + result.format + "\n" +
+                "Cancelled: " + result.cancelled);
+      }, 
+      function (error) {
+          alert("Scanning failed: " + error);
+      }
+   );"><br>Logout</div>
 		<div class="IconCell">&nbsp</div>
 		<div class="IconCell">&nbsp;</div>
 		<div class="IconCell">&nbsp;</div>
