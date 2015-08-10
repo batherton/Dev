@@ -18,11 +18,29 @@ var app = {
     onDeviceReady: function() {
 
         app.receivedEvent('deviceready');
+
+
+
+   cordova.plugins.barcodeScanner.scan(
+      function (result) {
+          alert("We got a barcode\n" +
+                "Result: " + result.text + "\n" +
+                "Format: " + result.format + "\n" +
+                "Cancelled: " + result.cancelled);
+      }, 
+      function (error) {
+          alert("Scanning failed: " + error);
+      }
+   );
+
+
+
+
+
 	cordova.plugins.backgroundMode.enable();
 	cordova.plugins.backgroundMode.onactivate = function () {
 		//alert('test background');
 	};
-	window.brightness = cordova.require("cordova.plugin.Brightness.Brightness");
 
     },
 
@@ -294,20 +312,6 @@ function callbackfunc(){
 }
 
 
-        function setBrightness(value) {
-            // value should be float in range from 0 to 1.
-            brightness.setBrightness(value, win, fail);
-        }
-        function getBrightness() {
-            // win([-1,0-1]) float 0-1 is a brightness level, -1 represents a system default
-            brightness.getBrightness( win, fail);
-        }
-        function win(status) {
-            alert('Message: ' + status);
-        }
-        function fail(status) {
-            alert('Error: ' + status);
-        }
 
 
 

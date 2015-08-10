@@ -78,7 +78,7 @@
 
     <gap:plugin name="org.apache.cordova.vibration" />
 
-    <gap:plugin name="cordova.plugin.c22.brightness" version="0.1.0" />
+<gap:plugin name="com.phonegap.plugins.barcodescanner" version="2.2.0" />
 
     <gap:plugin name="de.appplant.cordova.plugin.background-mode-imbxl" version="0.6.4" />
 
