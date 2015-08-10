@@ -298,8 +298,17 @@ function callbackfunc(){
 
 
 
+function dpicker(){
+var options = {
+  date: new Date(),
+  mode: 'date'
+};
 
+datePicker.show(options, function(date){
+  alert("date result " + date);  
+});
 
+}
 
 
 
