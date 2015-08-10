@@ -18,10 +18,6 @@ var app = {
     onDeviceReady: function() {
 
         app.receivedEvent('deviceready');
-
-
-	cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-	//cordova.plugins.backgroundMode.enable();
 	cordova.plugins.backgroundMode.enable();
 	cordova.plugins.backgroundMode.onactivate = function () {
 		//alert('test background');
@@ -298,17 +294,6 @@ function callbackfunc(){
 
 
 
-function dpicker(){
-var options = {
-  date: new Date(),
-  mode: 'date'
-};
-
-datePicker.show(options, function(date){
-  alert("date result " + date);  
-});
-
-}
 
 
 
