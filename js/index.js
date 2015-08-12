@@ -18,7 +18,7 @@ var app = {
     onDeviceReady: function() {
 
         app.receivedEvent('deviceready');
-	screen.lockOrientation('landscape');
+	screen.lockOrientation('portrait');
 
 //--------------------------------------------------------------
 
