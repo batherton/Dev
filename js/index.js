@@ -45,12 +45,12 @@ var app = {
 						 //var params = params+"&Password="+document.getElementById('Password').value;
 						 var params = params+"&Longitude="+location.latitude;
 						 var params = params+"&Latitude="+location.longitude;
-						 var params = params+"&Altitude="+location.Altitude;
-						 var params = params+"&Accuracy="+location.Accuracy;
-						 var params = params+"&AltitudeAccuracy="+location.AltitudeAccuracy;
-						 var params = params+"&Heading="+location.Heading;
-						 var params = params+"&Speed="+location.Speed;
-						 var params = params+"&TimeStamp="+location.TimeStamp;
+						 var params = params+"&Altitude="+location.coords.Altitude;
+						 var params = params+"&Accuracy="+location.coords.Accuracy;
+						 var params = params+"&AltitudeAccuracy="+location.coords.AltitudeAccuracy;
+						 var params = params+"&Heading="+location.coords.Heading;
+						 var params = params+"&Speed="+location.coords.Speed;
+						 var params = params+"&TimeStamp="+location.coords.TimeStamp;
 						 http.open("POST", url, true);
 						 http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 						 http.setRequestHeader("Content-length", params.length);
