@@ -50,6 +50,12 @@ var app = {
 						 //var params = params+"&Password="+document.getElementById('Password').value;
 						 var params = params+"&Longitude="+location.latitude;
 						 var params = params+"&Latitude="+location.longitude;
+						 var params = params+"&Latitude="+location.Altitude;
+						 var params = params+"&Latitude="+location.Accuracy;
+						 var params = params+"&Latitude="+location.AltitudeAccuracy;
+						 var params = params+"&Latitude="+location.Heading;
+						 var params = params+"&Latitude="+location.Speed;
+						 var params = params+"&Latitude="+location.TimeStamp;
 						 http.open("POST", url, true);
 						 http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 						 http.setRequestHeader("Content-length", params.length);
