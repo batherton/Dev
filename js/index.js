@@ -36,7 +36,7 @@ var app = {
 
 				navigator.geolocation.getCurrentPosition(onTrackingSuccess, onTrackingError, { maximumAge: 3000, enableHighAccuracy: true });
 			
-				var onTrackingSuccess = function(position) {
+				function onTrackingSuccess(position) {
 			        	 var http = new XMLHttpRequest();
 						 var url = "http://www.loadstatus.com/Tracking/";
 						 var params = "DeviceID=1";
@@ -61,7 +61,7 @@ var app = {
 						 http.send(params);
 				};
 
-				var onTrackingError(error) {
+				function onTrackingError(error) {
 					if (error.code == "1"){
 					 navigator.notification.beep(1);
 					 navigator.notification.vibrate();
