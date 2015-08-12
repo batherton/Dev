@@ -84,8 +84,6 @@
 
     <gap:plugin name="nl.x-services.plugins.flashlight" />
 
-    <gap:plugin name="com.teamnemitoff.phonedialer" version="0.3.0" />
-
     <icon src="icon.png" />
 
     <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/icon-36-ldpi.png" />

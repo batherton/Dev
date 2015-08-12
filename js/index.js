@@ -389,18 +389,5 @@ function FLight(){
 	});
 }
 
-function CallTom(){
-Error return by the plugin : ["feature","empty"]
-
-phonedialer.dial(
-  "6302124680", 
-  function(err) {
-    if (err == "empty") alert("Unknown phone number");
-    else alert("Dialer Error:" + err);    
-  },
-  function(success) { alert('Dialing succeeded'); }
- );
-
-}
 
 
