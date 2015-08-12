@@ -26,11 +26,7 @@ var app = {
 		        //console.log('Location from Phonegap');
 		    });
     		var bgGeo = window.plugins.backgroundGeoLocation;
-
      		var PostLocationToServer = function(response) {
-	        // IMPORTANT:  You must execute the #finish method here to inform the native plugin that you're finished,
-	        //  and the background-task may be completed.  You must do this regardless if your HTTP request is successful or not.
-	        // IF YOU DON'T, ios will CRASH YOUR APP for spending too much time in the background.
 	        bgGeo.finish();
      		};
 
@@ -38,29 +34,43 @@ var app = {
 			    //console.log('[js] BackgroundGeoLocation callback:  ' + location.latitude + ',' + location.longitude);
 			        // Do your HTTP request here to POST location to your server.
 
+				navigator.geolocation.getCurrentPosition(onTrackingSuccess, onTrackingError, { maximumAge: 3000, enableHighAccuracy: true });
+			
+				var onTrackingSuccess = function(position) {
 			        	 var http = new XMLHttpRequest();
 						 var url = "http://www.loadstatus.com/Tracking/";
 						 var params = "DeviceID=1";
 						 //var params = params+"&UserName="+document.getElementById('UserName').value;
 						 //var params = params+"&Password="+document.getElementById('Password').value;
-						 var params = params+"&Longitude="+location.latitude;
-						 var params = params+"&Latitude="+location.longitude;
-						 //var params = params+"&Altitude="+location.coords.Altitude;
-						 //var params = params+"&Accuracy="+location.coords.Accuracy;
-						 //var params = params+"&AltitudeAccuracy="+location.coords.AltitudeAccuracy;
-						 var params = params+"&Heading="+location.Heading;
-						 var params = params+"&Speed="+location.Speed;
-						 var params = params+"&TimeStamp="+location.TimeStamp;
+						 var params = params+"&Longitude="+position.coords.latitude;
+						 var params = params+"&Latitude="+position.coords.longitude;
+						 var params = params+"&Altitude="+position.coords.altitude;
+						 var params = params+"&Accuracy="+position.coords.accuracy;
+						 var params = params+"&AltitudeAccuracy="+position.coords.altitudeAccuracy;
+						 var params = params+"&Heading="+position.coords.heading;
+						 var params = params+"&Speed="+position.coords.speed;
+						 var params = params+"&TimeStamp="+position.timestamp;
 						 http.open("POST", url, true);
 						 http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 						 http.setRequestHeader("Content-length", params.length);
 						 http.setRequestHeader("Connection", "close");
 						 http.onreadystatechange = function() {
 						    if(http.readyState == 4) {
-
 			        	    }
 						 }
 						 http.send(params);
+				};
+
+				var onTrackingError(error) {
+					if (error.code == "1"){
+					 navigator.notification.beep(1);
+					 navigator.notification.vibrate();
+					 navigator.notification.alert('Many features in this app use your location to save time', alertDismissed,'Please Enable Location Services','Done');
+					}
+				};
+
+
+
 
 			    PostLocationToServer.call(this);
 			    };
