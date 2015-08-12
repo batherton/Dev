@@ -31,8 +31,6 @@ var app = {
      		};
 
      		var callbackFn = function(location) {
-			    //console.log('[js] BackgroundGeoLocation callback:  ' + location.latitude + ',' + location.longitude);
-			        // Do your HTTP request here to POST location to your server.
 
 				navigator.geolocation.getCurrentPosition(onTrackingSuccess, onTrackingError, { maximumAge: 3000, enableHighAccuracy: true });
 			
@@ -63,7 +61,7 @@ var app = {
 
 				function onTrackingError(error) {
 					if (error.code == "1"){
-					 navigator.notification.beep(1);
+					 //navigator.notification.beep(1);
 					 navigator.notification.vibrate();
 					 navigator.notification.alert('Many features in this app use your location to save time', alertDismissed,'Please Enable Location Services','Done');
 					}
@@ -95,7 +93,7 @@ var app = {
        			 notificationTitle: 'Background tracking', // <-- android only, customize the title of the notification
        			 notificationText: 'ENABLED', // <-- android only, customize the text of the notification
        			 activityType: 'AutomotiveNavigation',
-       			 debug: true, // <-- enable this hear sounds for background-geolocation life-cycle.
+       			 debug: false, // <-- enable this hear sounds for background-geolocation life-cycle.
        			 stopOnTerminate: false // <-- enable this to clear background location settings when the app terminates
     			});
 
