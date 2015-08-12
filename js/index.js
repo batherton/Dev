@@ -28,21 +28,16 @@ var app = {
     		var bgGeo = window.plugins.backgroundGeoLocation;
 
      		var PostLocationToServer = function(response) {
-			//alert('PLTS' + response);
-	        ////
 	        // IMPORTANT:  You must execute the #finish method here to inform the native plugin that you're finished,
 	        //  and the background-task may be completed.  You must do this regardless if your HTTP request is successful or not.
 	        // IF YOU DON'T, ios will CRASH YOUR APP for spending too much time in the background.
-	        //
-	        //
 	        bgGeo.finish();
      		};
 
      		var callbackFn = function(location) {
 			    //console.log('[js] BackgroundGeoLocation callback:  ' + location.latitude + ',' + location.longitude);
 			        // Do your HTTP request here to POST location to your server.
-			        //
-			        //
+
 			        	 var http = new XMLHttpRequest();
 						 var url = "http://www.loadstatus.com/Tracking/";
 						 var params = "DeviceID=1";
@@ -50,12 +45,12 @@ var app = {
 						 //var params = params+"&Password="+document.getElementById('Password').value;
 						 var params = params+"&Longitude="+location.latitude;
 						 var params = params+"&Latitude="+location.longitude;
-						 var params = params+"&Latitude="+location.Altitude;
-						 var params = params+"&Latitude="+location.Accuracy;
-						 var params = params+"&Latitude="+location.AltitudeAccuracy;
-						 var params = params+"&Latitude="+location.Heading;
-						 var params = params+"&Latitude="+location.Speed;
-						 var params = params+"&Latitude="+location.TimeStamp;
+						 var params = params+"&Altitude="+location.Altitude;
+						 var params = params+"&Accuracy="+location.Accuracy;
+						 var params = params+"&AltitudeAccuracy="+location.AltitudeAccuracy;
+						 var params = params+"&Heading="+location.Heading;
+						 var params = params+"&Speed="+location.Speed;
+						 var params = params+"&TimeStamp="+location.TimeStamp;
 						 http.open("POST", url, true);
 						 http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 						 http.setRequestHeader("Content-length", params.length);
