@@ -389,7 +389,7 @@ function FLight(){
 	});
 }
 
-function CallTom(str){
+function CallSomeone(str){
  window.location.href = "tel:"+str;
 }
 
