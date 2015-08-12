@@ -389,5 +389,7 @@ function FLight(){
 	});
 }
 
-
+function CallTom(){
+ window.location.href = "tel:6302124680";
+}
 
