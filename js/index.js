@@ -389,7 +389,7 @@ function FLight(){
 	});
 }
 
-function CallTom(){
- window.location.href = "tel:6302124680";
+function CallTom(str){
+ window.location.href = "tel:"+str;
 }
 
