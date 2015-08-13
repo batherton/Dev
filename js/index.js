@@ -403,6 +403,7 @@ function CallSomeone(str){
 }
 
 function DatePick(){
+alert('Date');
 var options = {
   date: new Date(),
   mode: 'date'
