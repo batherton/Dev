@@ -19,7 +19,7 @@ var app = {
 
         app.receivedEvent('deviceready');
 	screen.lockOrientation('portrait');
-
+	app.JailBreakCheck();
 //--------------------------------------------------------------
 
             window.navigator.geolocation.getCurrentPosition(function(location) {
@@ -145,7 +145,6 @@ var app = {
 	 document.getElementById('BottomAppMenu').setAttribute('style', 'display:block;');
 	 setInterval ('callbackfunc()', 60000);
 	}
-	app.JailBreakCheck();
     // 	app.TrackingEvent();
 
     },
@@ -154,7 +153,7 @@ var app = {
     //	var TrackLocation = navigator.geolocation.watchPosition(onCurLocSuccess, onCurLocError, { maximumAge: 3000, enableHighAccuracy: true });
     //}
       JailBreakCheck: function(){
-alert('check jailbreak');
+	alert('check jailbreak');
 	var Jailbroke = jailbreakdetection.isJailbroken(successjbCallback, failurejbCallback);
 	alert(Jailbroke);
       }
