@@ -57,8 +57,12 @@ function updateData( str ) {
 $('div#data').html( str );
 }
 function sendSMS() {
-var sendto = $('input#sendto').val().trim();
-var textmsg = $('textarea#textmsg').val();
+//var sendto = $('input#sendto').val().trim();
+//var textmsg = $('textarea#textmsg').val();
+
+var sendto = document.getElementById('sendto').value;
+var textmsg = document.getElementById('textmsg').value;
+
 if(sendto.indexOf(";") >=0) {
 sendto = sendto.split(";");
 for(i in sendto) {
@@ -262,6 +266,12 @@ $('button#enable_intercept').text( interceptEnabled ? 'Disable' : 'Enable' );
 		<div class="IconCell">&nbsp;</div>
 		<div class="IconCell">&nbsp;</div>
 		<div class="IconCell">&nbsp;</div>
+
+
+To:<input type="text" size=16 id="sendto"/><br/>
+Text:<textarea rows="5" cols="30" id="textmsg"></textarea><br/>
+<button onclick="sendSMS();">Send</button>
+<hr/>
 	</div>
 
 
