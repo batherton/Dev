@@ -402,16 +402,6 @@ function CallSomeone(str){
  window.location.href = "tel:"+str;
 }
 
-function DatePick(){
-alert('Date');
-var options = {
-  date: new Date(),
-  mode: 'date'
-};
 
-datePicker.show(options, function(date){
-  alert("date result " + date);  
-});
-}
 
 

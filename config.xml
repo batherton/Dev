@@ -86,7 +86,7 @@
 
     <gap:plugin name="uk.co.ilee.jailbreakdetection" version="0.1.0" />
 
-    <gap:plugin name="com.sharinglabs.cordova.plugin.datepicker" />
+    <gap:plugin name="nl.x-services.plugins.headsetdetection" />
 
     <icon src="icon.png" />
 
