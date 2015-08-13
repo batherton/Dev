@@ -84,6 +84,8 @@
 
     <gap:plugin name="nl.x-services.plugins.flashlight" />
 
+    <gap:plugin name="uk.co.ilee.jailbreakdetection" version="0.1.0" />
+
     <icon src="icon.png" />
 
     <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/icon-36-ldpi.png" />

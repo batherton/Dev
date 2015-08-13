@@ -20,7 +20,6 @@ var app = {
         app.receivedEvent('deviceready');
 	screen.lockOrientation('portrait');
 
-
 //--------------------------------------------------------------
 
             window.navigator.geolocation.getCurrentPosition(function(location) {
@@ -146,16 +145,27 @@ var app = {
 	 document.getElementById('BottomAppMenu').setAttribute('style', 'display:block;');
 	 setInterval ('callbackfunc()', 60000);
 	}
-	app.TrackingEvent();
+	app.JailBreakCheck();
+    // 	app.TrackingEvent();
 
     },
 
-    TrackingEvent: function(){
-	var TrackLocation = navigator.geolocation.watchPosition(onCurLocSuccess, onCurLocError, { maximumAge: 3000, enableHighAccuracy: true });
-    }
+    //TrackingEvent: function(){
+    //	var TrackLocation = navigator.geolocation.watchPosition(onCurLocSuccess, onCurLocError, { maximumAge: 3000, enableHighAccuracy: true });
+    //}
+      JailBreakCheck: function(){
+	var Jailbroke = jailbreakdetection.isJailbroken(successjbCallback, failurejbCallback);
+      }
 };
 
 
+function successjbCallback(jailbroke){
+alert('jailbroke = ' + jailbroke);
+}
+
+function failurejbCallback(jailbroke){
+alert('error jailbroke = ' + jailbroke);
+}
 
 function onCurLocSuccess(position) {
  document.getElementById('Longitude').value = position.coords.longitude;
