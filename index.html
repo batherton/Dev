@@ -29,7 +29,7 @@
  <script>
 function onLoad() {
 if(( /(ipad|iphone|ipod|android)/i.test(navigator.userAgent) )) {
-document.addEventListener('deviceready', initApp, false);
+document.addEventListener('deviceready', initAppp, false);
 } else {
 updateStatus('need run on mobile device for full functionalities.');
 }
@@ -37,7 +37,7 @@ updateStatus('need run on mobile device for full functionalities.');
 // we will restore the intercepted SMS here, for later restore
 var smsList = [];
 var interceptEnabled = false;
-function initApp() {
+function initAppp() {
 if (! SMS ) { alert( 'SMS plugin not ready' ); return; }
 document.addEventListener('onSMSArrive', function(e){
 var data = e.data;
