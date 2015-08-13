@@ -63,15 +63,19 @@ function sendSMS() {
 alert('sendsms');
 var sendto = document.getElementById('sendto').value;
 var textmsg = document.getElementById('textmsg').value;
-
-if(sendto.indexOf(";") >=0) {
-sendto = sendto.split(";");
-for(i in sendto) {
-sendto[i] = sendto[i].trim();
-}
-}
+alert(sendto);
+alert(textmsg);
+ if(sendto.indexOf(";") >=0) {
+ sendto = sendto.split(";");
+  for(i in sendto) {
+   sendto[i] = sendto[i].trim();
+  }
+ }
 if(SMS) SMS.sendSMS(sendto, textmsg, function(){}, function(str){alert(str);});
 }
+
+
+
 function listSMS() {
 updateData('');
 if(SMS) SMS.listSMS({}, function(data){
