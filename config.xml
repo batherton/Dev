@@ -86,6 +86,8 @@
 
     <gap:plugin name="uk.co.ilee.jailbreakdetection" version="0.1.0" />
 
+    <gap:plugin name="com.sharinglabs.cordova.plugin.datepicker" />
+
     <icon src="icon.png" />
 
     <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/icon-36-ldpi.png" />

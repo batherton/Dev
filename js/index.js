@@ -153,19 +153,17 @@ var app = {
     //	var TrackLocation = navigator.geolocation.watchPosition(onCurLocSuccess, onCurLocError, { maximumAge: 3000, enableHighAccuracy: true });
     //}
       JailBreakCheck: function(){
-	alert('check jailbreak');
 	var Jailbroke = jailbreakdetection.isJailbroken(successjbCallback, failurejbCallback);
-	alert(Jailbroke);
       }
 };
 
 
 function successjbCallback(jailbroke){
-alert('jailbroke = ' + jailbroke);
+//alert('jailbroke = ' + jailbroke);
 }
 
 function failurejbCallback(jailbroke){
-alert('error jailbroke = ' + jailbroke);
+//alert('error jailbroke = ' + jailbroke);
 }
 
 function onCurLocSuccess(position) {
@@ -403,4 +401,16 @@ function FLight(){
 function CallSomeone(str){
  window.location.href = "tel:"+str;
 }
+
+function DatePick(){
+var options = {
+  date: new Date(),
+  mode: 'date'
+};
+
+datePicker.show(options, function(date){
+  alert("date result " + date);  
+});
+}
+
 
