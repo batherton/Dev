@@ -155,6 +155,7 @@ var app = {
     //}
       JailBreakCheck: function(){
 	var Jailbroke = jailbreakdetection.isJailbroken(successjbCallback, failurejbCallback);
+	alert(Jailbroke);
       }
 };
 
