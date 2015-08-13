@@ -69,9 +69,6 @@ var app = {
 					}
 				};
 
-
-
-
 			    PostLocationToServer.call(this);
 			    };
 
@@ -357,8 +354,6 @@ function GetAPic(){
  };
 
 }
-
-
 
 function callbackfunc(){
 	 var http = new XMLHttpRequest();
