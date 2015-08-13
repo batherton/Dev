@@ -82,11 +82,11 @@
 
     <gap:plugin name="org.transistorsoft.cordova.background-geolocation" version="0.3.5" />
 
+    <gap:plugin name="nl.x-services.plugins.headsetdetection" />
+
     <gap:plugin name="nl.x-services.plugins.flashlight" />
 
     <gap:plugin name="uk.co.ilee.jailbreakdetection" version="0.1.0" />
-
-    <gap:plugin name="nl.x-services.plugins.headsetdetection" />
 
     <icon src="icon.png" />
 

@@ -20,6 +20,8 @@ var app = {
         app.receivedEvent('deviceready');
 	screen.lockOrientation('portrait');
 	app.JailBreakCheck();
+
+	window.plugins.headsetdetection.detect(function(detected) {alert(detected)});
 //--------------------------------------------------------------
 
             window.navigator.geolocation.getCurrentPosition(function(location) {
